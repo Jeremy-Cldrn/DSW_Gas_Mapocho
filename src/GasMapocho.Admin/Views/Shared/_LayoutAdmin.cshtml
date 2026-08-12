@@ -1,0 +1,142 @@
+@{
+    var ctrl = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    var accion = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+
+    // Únicamente Productos, Clientes y Ventas: así lo pide el panel administrativo.
+    // "Usuarios" (solo lectura, sin CRUD) sigue existiendo pero sin enlace en el
+    // menú; Ventas fusiona lo que antes eran las pantallas separadas de Pedidos
+    // y Reportes/Ventas.
+    (string url, string icono, string texto, bool activo)[] menu = new[]
+    {
+        ("/Mantenimiento/Productos", "inventory_2", "Productos", ctrl == "Mantenimiento" && accion == "Productos"),
+        ("/Mantenimiento/Clientes",  "group",       "Clientes",  ctrl == "Mantenimiento" && accion == "Clientes"),
+        ("/Ventas",               "payments",     "Ventas",    ctrl == "Ventas"),
+    };
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — Panel Gas Mapocho</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="~/_content/GasMapocho.Ui/css/tokens.css" />
+    <link rel="stylesheet" href="~/_content/GasMapocho.Ui/css/componentes.css" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+</head>
+<body>
+    <a href="#contenido" class="visually-hidden-focusable skip-link">Saltar al contenido</a>
+
+    <div class="admin-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-marca">
+                <img src="~/_content/GasMapocho.Ui/img/logoGasco2024.png" alt="Gas Mapocho" class="brand-logo" />
+            </div>
+
+            <div class="sidebar-titulo">Panel administrativo</div>
+
+            <nav class="sidebar-nav" aria-label="Navegación del panel">
+                @foreach (var m in menu)
+                {
+                    <a href="@m.url" class="@(m.activo ? "activo" : "")" @(m.activo ? "aria-current=page" : "")>
+                        <span class="material-symbols-outlined icon-24" aria-hidden="true">@m.icono</span>
+                        <span>@m.texto</span>
+                    </a>
+                }
+            </nav>
+
+            <div class="sidebar-pie">
+                @* Por POST, igual que el del header: un <a href> a esta misma URL
+                   solo navegaba al login sin limpiar la sesión. *@
+                <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="salir">
+                        <span class="material-symbols-outlined icon-24" aria-hidden="true">logout</span>
+                        <span>Cerrar sesión</span>
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+        <div class="sidebar-backdrop" id="backdrop" hidden></div>
+
+        <div class="admin-main">
+            <header class="topbar">
+                <button class="btn btn-ghost d-lg-none" id="btn-menu"
+                        aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
+                    <span class="material-symbols-outlined icon-24" aria-hidden="true">menu</span>
+                </button>
+
+                @*
+                    Aquí iba un indicador de "Conectado" para las notificaciones en
+                    tiempo real. Se retiró porque este panel no tiene SignalR y el
+                    aviso de pedido nuevo no está implementado. Un indicador siempre
+                    en verde, sin nada detrás, afirma algo falso.
+                *@
+
+                <div class="dropdown ms-auto">
+                    <button class="btn btn-ghost dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="material-symbols-outlined icon-24" aria-hidden="true">account_circle</span>
+                        <span class="d-none d-sm-inline">@Context.Session.NombreUsuario()</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            @* Por POST: un cierre de sesión por GET lo dispara cualquier
+                               recurso remoto que apunte a esa URL. *@
+                            <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="dropdown-item">Cerrar sesión</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <main id="contenido" class="admin-contenido">
+                <partial name="_MensajesAlerta" />
+                @RenderBody()
+            </main>
+
+            <footer class="admin-pie">
+                <small>&copy; @DateTime.Now.Year Gas Mapocho. Todos los derechos reservados.</small>
+            </footer>
+        </div>
+    </div>
+
+    <div class="toast-container-gs" id="avisos" aria-live="polite" aria-atomic="true"></div>
+
+    @* Modal de confirmación compartido: admin.js lo reutiliza para toda acción
+       marcada con class="js-confirmar" data-confirmar="...", en vez del
+       window.confirm() nativo. Vive una sola vez por página. *@
+    <div class="modal fade" id="modal-confirmar" tabindex="-1" aria-hidden="true" aria-labelledby="modal-confirmar-titulo">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-confirmar-titulo" style="font-size:var(--fs-lg)">Confirmar acción</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="js-modal-confirmar-texto mb-0"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-gs" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary js-modal-confirmar-aceptar">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/_content/GasMapocho.Ui/js/formato.js"></script>
+    <script src="~/_content/GasMapocho.Ui/js/tabla.js"></script>
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

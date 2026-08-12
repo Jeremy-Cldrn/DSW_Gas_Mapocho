@@ -1,0 +1,17 @@
+@model string
+@*
+    Barra de búsqueda + filtro. El JS la toma por la clase js-buscar (nunca por
+    una clase de estilo), así un cambio de diseño no rompe el comportamiento.
+*@
+<div class="tabla-toolbar">
+    <div class="buscador">
+        <span class="material-symbols-outlined" aria-hidden="true">search</span>
+        <label class="visually-hidden" for="buscar-@Model">@Model</label>
+        <input type="search" id="buscar-@Model" class="form-control js-buscar"
+               placeholder="@Model" autocomplete="off" />
+    </div>
+    <button type="button" class="btn btn-outline-gs">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">filter_list</span>
+        Filtrar
+    </button>
+</div>

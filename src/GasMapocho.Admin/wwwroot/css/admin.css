@@ -1,0 +1,130 @@
+/* ============================================================
+   Estilos propios del panel administrativo.
+   Lo compartido con la Tienda vive en GasMapocho.Ui.
+   ============================================================ */
+
+.skip-link {
+  position: absolute; top: var(--sp-2); left: var(--sp-2); z-index: 1100;
+  background: var(--gs-white); padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+  color: var(--gs-primary-700); font-weight: 600;
+}
+
+.admin-shell { display: flex; min-height: 100vh; }
+
+/* --- Sidebar ------------------------------------------------ */
+.sidebar {
+  width: var(--sidebar-w);
+  flex: 0 0 var(--sidebar-w);
+  background: var(--gs-white);
+  border-right: 1px solid var(--gs-gray-200);
+  display: flex; flex-direction: column;
+  position: sticky; top: 0; height: 100vh;
+}
+
+.sidebar-marca {
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--gs-gray-200);
+  display: flex; align-items: center;
+  min-height: var(--header-h);
+}
+
+.sidebar-titulo {
+  padding: var(--sp-5) var(--sp-5) var(--sp-2);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gs-gray-600);
+}
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; padding: 0 var(--sp-3); flex: 1; }
+
+.sidebar-nav a {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-3);
+  border-radius: var(--radius-md);
+  color: var(--gs-gray-700);
+  text-decoration: none;
+  font-weight: 600; font-size: var(--fs-sm);
+  border-left: 3px solid transparent;
+}
+.sidebar-nav a:hover { background: var(--gs-gray-100); color: var(--gs-navy); }
+.sidebar-nav a.activo {
+  background: var(--gs-primary-50);
+  color: var(--gs-primary-700);
+  border-left-color: var(--gs-primary-700);
+}
+
+/* Anclado abajo y separado del resto */
+.sidebar-pie { padding: var(--sp-3); border-top: 1px solid var(--gs-gray-200); }
+.sidebar-pie .salir {
+  display: flex; align-items: center; gap: var(--sp-3); width: 100%;
+  padding: var(--sp-3); border-radius: var(--radius-md);
+  color: var(--gs-gray-700); text-decoration: none;
+  font-weight: 600; font-size: var(--fs-sm);
+  /* Reset de botón: es un <button> dentro de un form (logout va por POST). */
+  background: none; border: none; text-align: left; cursor: pointer;
+  font-family: inherit;
+}
+.sidebar-pie .salir:hover { background: var(--gs-red-50); color: var(--gs-red-700); }
+
+.sidebar-backdrop {
+  position: fixed; inset: 0; background: rgba(7,37,49,.45); z-index: 1040;
+}
+
+/* --- Área principal ----------------------------------------- */
+.admin-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.topbar {
+  background: var(--gs-white);
+  border-bottom: 1px solid var(--gs-gray-200);
+  min-height: var(--header-h);
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: 0 var(--sp-5);
+  position: sticky; top: 0; z-index: 1030;
+}
+
+.admin-contenido { padding: var(--sp-6) var(--sp-5); flex: 1; }
+.admin-pie {
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--gs-gray-200);
+  color: var(--gs-gray-600);
+  text-align: center;
+}
+
+/* --- Estado de la conexión en tiempo real -------------------- */
+.conexion {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-xs); font-weight: 600;
+  padding: 4px 10px; border-radius: var(--radius-pill);
+  background: var(--gs-aprob-bg); color: var(--gs-aprob-fg);
+  border: 1px solid var(--gs-aprob-bd);
+}
+.conexion .punto { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.conexion.reconectando { background: var(--gs-pend-bg); color: var(--gs-pend-fg); border-color: var(--gs-pend-bd); }
+.conexion.caido { background: var(--gs-rech-bg); color: var(--gs-rech-fg); border-color: var(--gs-rech-bd); }
+
+/* --- Cabecera de página -------------------------------------- */
+.pagina-cabecera {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3);
+  justify-content: space-between; align-items: flex-end;
+  margin-bottom: var(--sp-5);
+}
+.pagina-cabecera p { margin: 0; color: var(--gs-gray-600); }
+
+/* --- Off-canvas en pantallas chicas -------------------------- */
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed; top: 0; left: 0; z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebar.abierto { transform: translateX(0); }
+  .admin-contenido { padding: var(--sp-5) var(--sp-4); }
+}
+
+@media (min-width: 992px) {
+  .sidebar-backdrop { display: none !important; }
+}

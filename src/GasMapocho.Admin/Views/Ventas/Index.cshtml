@@ -1,0 +1,32 @@
+@model TablaVm
+@{
+    var ventasDelMes = (int)(ViewData["VentasDelMes"] ?? 0);
+    var montoTotal = (decimal)(ViewData["MontoTotal"] ?? 0m);
+}
+
+<partial name="_Tabla" model="Model" />
+
+<div class="row g-4 mt-1">
+    <div class="col-md-6">
+        <div class="kpi">
+            <div class="kpi-icono">
+                <span class="material-symbols-outlined icon-24" aria-hidden="true">receipt</span>
+            </div>
+            <div>
+                <div class="kpi-label">Ventas del mes</div>
+                <div class="kpi-valor">@ventasDelMes</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="kpi">
+            <div class="kpi-icono">
+                <span class="material-symbols-outlined icon-24" aria-hidden="true">payments</span>
+            </div>
+            <div>
+                <div class="kpi-label">Monto total</div>
+                <div class="kpi-valor">@montoTotal.ToString("C0")</div>
+            </div>
+        </div>
+    </div>
+</div>

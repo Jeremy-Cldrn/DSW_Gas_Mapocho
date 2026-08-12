@@ -1,0 +1,96 @@
+/* ============================================================
+   Design system — Gas Mapocho
+   Colores tomados del logo (logoGasco2024.png) y de gasco.cl.
+   Los contrastes están calculados con WCAG 2.1, no estimados.
+   ============================================================ */
+
+:root {
+  /* --- Marca (colores exactos del logotipo) --- */
+  --gs-cyan: #00A1DE;                /* símbolo del logo */
+  --gs-red:  #ED2939;                /* logotipo "gasco" */
+
+  /* --- Primario cian --- */
+  --gs-primary-50:  #F2FCFF;
+  --gs-primary-100: #D9F4FD;
+  --gs-primary-200: #B8E5F6;
+  --gs-primary-400: #39C3E5;
+  --gs-primary-500: #00A3E0;         /* color de marca en UI — SOLO gráficos, 2.87:1 */
+  --gs-primary-600: #008CC4;
+  --gs-primary-700: #0077A5;         /* texto y botones — 5.02:1 con blanco */
+
+  /* --- Acento rojo --- */
+  --gs-red-50:  #FDE8EA;
+  --gs-red-500: #ED2939;             /* 4.22:1 — solo texto grande */
+  --gs-red-600: #D81E2C;             /* botones — 5.07:1 con blanco */
+  --gs-red-700: #A11722;             /* texto de error */
+
+  /* --- Neutros --- */
+  --gs-navy:     #072531;            /* 15.93:1 */
+  --gs-gray-900: #1A1A1A;
+  --gs-gray-700: #4D4D4D;            /* cuerpo — 8.45:1 */
+  --gs-gray-600: #575756;            /* secundario — 7.23:1 (último nivel legible) */
+  --gs-gray-400: #8D8F90;            /* 2.90:1 — NUNCA texto, solo bordes e iconos */
+  --gs-gray-300: #C9CDD0;
+  --gs-gray-200: #E4E5E6;
+  --gs-gray-100: #F1F1F1;
+  --gs-gray-50:  #F8F8F8;
+  --gs-white:    #FFFFFF;
+
+  /* --- Semánticos --- */
+  --gs-success: #2E9E63;
+  --gs-warning: #E9AE30;
+  --gs-danger:  #D81E2C;
+  --gs-info:    #00A3E0;
+
+  /* --- Badges de estado (dark on light, todos ≥6:1) --- */
+  --gs-pend-bg:   #FFF4DA;  --gs-pend-fg:   #7A5300;  --gs-pend-bd: #E9AE30;
+  --gs-aprob-bg:  #E6F6EC;  --gs-aprob-fg:  #10633A;  --gs-aprob-bd: #2E9E63;
+  --gs-rech-bg:   #FDE8EA;  --gs-rech-fg:   #A11722;  --gs-rech-bd: #ED2939;
+
+  /* --- Tipografía --- */
+  --gs-font-base:    'Mulish', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --gs-font-heading: 'Montserrat', var(--gs-font-base);
+
+  --fs-display: 2.5rem;   --lh-display: 3rem;
+  --fs-h1: 2rem;          --lh-h1: 2.5rem;
+  --fs-h2: 1.5rem;        --lh-h2: 2rem;
+  --fs-h3: 1.25rem;       --lh-h3: 1.75rem;
+  --fs-body: 1rem;        --lh-body: 1.5rem;
+  --fs-sm: .875rem;       --lh-sm: 1.25rem;
+  --fs-xs: .75rem;        --lh-xs: 1rem;
+
+  /* --- Espaciado (base 4px) --- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+  /* --- Bordes y sombras --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(7,37,49,.06);
+  --shadow-md: 0 2px 8px rgba(7,37,49,.08);
+  --shadow-lg: 0 8px 24px rgba(7,37,49,.12);
+
+  /* --- Layout --- */
+  --sidebar-w: 280px;
+  --header-h: 64px;
+
+  /* ============================================================
+     Sobrescritura de Bootstrap 5 mediante sus propias variables.
+     Nunca usar !important sobre Bootstrap.
+     ============================================================ */
+  --bs-primary:          #0077A5;
+  --bs-primary-rgb:      0, 119, 165;
+  --bs-danger:           #D81E2C;
+  --bs-danger-rgb:       216, 30, 44;
+  --bs-body-color:       #4D4D4D;
+  --bs-body-bg:          #F8F8F8;
+  --bs-body-font-family: 'Mulish', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --bs-border-radius:    8px;
+  --bs-border-radius-lg: 12px;
+  --bs-border-color:     #C9CDD0;
+  --bs-link-color:       #0077A5;
+  --bs-link-hover-color: #008CC4;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "ClienteGrpc.Grpc";
+
+package producto;
+
+// Copia del contrato publicado por GasMapocho.Api. El plan no crea proyectos
+// de contratos compartidos: cada lado tiene su .proto y ambos deben coincidir.
+service ProductoGrpc {
+  rpc ConsultarProducto (ProductoRequest) returns (ProductoReply);
+}
+
+message ProductoRequest {
+  int32 id_producto = 1;
+}
+
+message ProductoReply {
+  int32  id_producto = 1;
+  string codigo      = 2;
+  string nombre      = 3;
+  double precio      = 4;
+  int32  stock       = 5;
+  bool   encontrado  = 6;
+}

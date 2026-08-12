@@ -1,0 +1,97 @@
+@model ProductoVm
+@{
+    var esNuevo = Model.Id == 0;
+}
+
+<div class="pagina-cabecera">
+    <div>
+        <h1 class="mb-1">@(esNuevo ? "Nuevo producto" : "Editar producto")</h1>
+        <p>Completa los datos del producto y guarda los cambios.</p>
+    </div>
+    <a href="/Mantenimiento/Productos" class="btn btn-outline-gs">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">arrow_back</span>
+        Volver al listado
+    </a>
+</div>
+
+<form asp-action="FormProducto" method="post" novalidate style="max-width:720px">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <div class="card-gs">
+        <div class="card-gs-body">
+            <p class="text-muted-gs mb-4" style="font-size:var(--fs-sm)">
+                Los campos marcados con <span class="req">*</span> son obligatorios.
+            </p>
+
+            @* Errores que devuelve la API (código repetido, por ejemplo). *@
+            @if (ViewData.ModelState[string.Empty]?.Errors.Count > 0)
+            {
+                <div class="alerta-gs alerta-error mb-4">
+                    <span class="material-symbols-outlined icon-20" aria-hidden="true">error</span>
+                    <span>@ViewData.ModelState[string.Empty]!.Errors[0].ErrorMessage</span>
+                </div>
+            }
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label asp-for="Codigo" class="form-label">
+                        Código <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Codigo" class="form-control" placeholder="BAL-05" />
+                    <span asp-validation-for="Codigo" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-8">
+                    <label asp-for="Nombre" class="form-label">
+                        Nombre <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Balón de gas 5 kg" />
+                    <span asp-validation-for="Nombre" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Precio" class="form-label">
+                        Precio <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    @*
+                        type="number" step="1" — SOLO dígitos, sin separadores.
+                        Con cultura es-CL, jquery.validate leería "14.500" como 14,5
+                        y lo guardaría mal SIN lanzar ningún error. Aceptar solo
+                        dígitos elimina el problema de raíz.
+                    *@
+                    <input asp-for="Precio" class="form-control" type="number" step="1" min="1"
+                           inputmode="numeric" placeholder="14500" />
+                    <span asp-validation-for="Precio" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Stock" class="form-label">
+                        Stock <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Stock" class="form-control" type="number" step="1" min="0"
+                           inputmode="numeric" />
+                    <span asp-validation-for="Stock" class="field-validation-error"></span>
+                </div>
+
+                @* CapacidadKg no se muestra ni se pide: el catálogo ya no depende de
+                   ese campo (§17.1). Queda en 0 por defecto en el modelo, valor
+                   válido para accesorios y balones por igual desde que se mide todo
+                   por Código/Nombre. *@
+                <input type="hidden" asp-for="CapacidadKg" value="0" />
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex gap-2 mt-4">
+        <button type="submit" class="btn btn-primary @(esNuevo ? "" : "js-confirmar")"
+                data-confirmar="@(esNuevo ? null : "¿Estás seguro que deseas actualizar el producto?")">
+            Guardar
+        </button>
+        <a href="/Mantenimiento/Productos" class="btn btn-outline-gs">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

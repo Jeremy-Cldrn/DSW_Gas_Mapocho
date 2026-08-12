@@ -1,0 +1,64 @@
+@model List<ProductoVm>
+
+@if (!Model.Any())
+{
+    <partial name="_EstadoVacio"
+             model="@(new EstadoVacioVm("search_off", "No encontramos productos",
+                      "Prueba con otro término de búsqueda.", "Ver todo el catálogo", "/Catalogo"))" />
+}
+else
+{
+    <div class="catalogo-grid">
+        @foreach (var p in Model)
+        {
+            <article class="producto-card">
+                @* Placeholder hasta que existan las fotos reales de producto *@
+                <div class="producto-img">
+                    <img src="~/_content/GasMapocho.Ui/img/producto-placeholder.svg"
+                         alt="@p.Nombre" loading="lazy" />
+                </div>
+
+                <div class="producto-body">
+                    <h3 class="producto-nombre text-center">@p.Nombre</h3>
+
+                    @* Código, precio y disponibilidad agrupados; el contador de
+                       cantidad va al costado de ese bloque, no debajo. *@
+                    <div class="producto-info-fila">
+                        <div class="producto-datos">
+                            <div class="producto-codigo">Código @p.Codigo</div>
+                            <div class="producto-precio">@p.Precio.ToString("C0")</div>
+                            <div class="stock-ind stock-@p.EstadoStock">@p.TextoStock</div>
+                        </div>
+
+                        @*
+                            La estructura es IDÉNTICA con y sin stock: mismo selector de
+                            cantidad. Solo cambian los estados deshabilitados. Así las
+                            tarjetas se alinean siempre, sea cual sea el inventario.
+                        *@
+                        <div class="cantidad-control">
+                            <button type="button" class="btn js-menos" aria-label="Disminuir cantidad"
+                                    @(p.Stock == 0 ? "disabled" : "")>−</button>
+                            <input type="number" class="js-cantidad" value="1" min="1" max="@Math.Max(p.Stock, 1)"
+                                   aria-label="Cantidad de @p.Nombre" @(p.Stock == 0 ? "disabled" : "") />
+                            <button type="button" class="btn js-mas" aria-label="Aumentar cantidad"
+                                    @(p.Stock == 0 ? "disabled" : "")>+</button>
+                        </div>
+                    </div>
+
+                    @* El botón Agregar siempre ocupa todo el ancho de la card. *@
+                    <div class="producto-acciones">
+                        @if (p.Stock == 0)
+                        {
+                            <button type="button" class="btn btn-primary w-100" disabled>Sin stock</button>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-primary w-100 js-agregar"
+                                    data-id="@p.Id" data-stock="@p.Stock">Agregar</button>
+                        }
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+}

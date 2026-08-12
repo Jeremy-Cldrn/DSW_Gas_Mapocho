@@ -1,0 +1,99 @@
+@model ClienteVm
+@{
+    var esNuevo = Model.Id == 0;
+}
+
+<div class="pagina-cabecera">
+    <div>
+        <h1 class="mb-1">@(esNuevo ? "Nuevo cliente" : "Editar cliente")</h1>
+        <p>Completa los datos del cliente y guarda los cambios.</p>
+    </div>
+    <a href="/Mantenimiento/Clientes" class="btn btn-outline-gs">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">arrow_back</span>
+        Volver al listado
+    </a>
+</div>
+
+<form asp-action="FormCliente" method="post" novalidate style="max-width:720px">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <div class="card-gs">
+        <div class="card-gs-body">
+            <p class="text-muted-gs mb-4" style="font-size:var(--fs-sm)">
+                Los campos marcados con <span class="req">*</span> son obligatorios.
+            </p>
+
+            @* Errores que devuelve la API (RUT repetido, por ejemplo). *@
+            @if (ViewData.ModelState[string.Empty]?.Errors.Count > 0)
+            {
+                <div class="alerta-gs alerta-error mb-4">
+                    <span class="material-symbols-outlined icon-20" aria-hidden="true">error</span>
+                    <span>@ViewData.ModelState[string.Empty]!.Errors[0].ErrorMessage</span>
+                </div>
+            }
+
+            <div class="row g-3">
+                <div class="col-md-8">
+                    <label asp-for="Nombre" class="form-label">
+                        Nombre <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Juan Pérez" />
+                    <span asp-validation-for="Nombre" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Documento" class="form-label">
+                        RUT <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Documento" class="form-control" placeholder="12.345.678-9" />
+                    <span asp-validation-for="Documento" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Email" class="form-label">
+                        Correo <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Email" class="form-control" placeholder="juan.perez@correo.cl" />
+                    <span asp-validation-for="Email" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Telefono" class="form-label">
+                        Teléfono <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Telefono" class="form-control" placeholder="+56 9 1234 5678" />
+                    <span asp-validation-for="Telefono" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-5">
+                    <label asp-for="Comuna" class="form-label">
+                        Comuna <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Comuna" class="form-control" placeholder="Independencia" />
+                    <span asp-validation-for="Comuna" class="field-validation-error"></span>
+                </div>
+
+                <div class="col-md-7">
+                    <label asp-for="Direccion" class="form-label">
+                        Dirección <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input asp-for="Direccion" class="form-control" placeholder="Av. Independencia 1245" />
+                    <span asp-validation-for="Direccion" class="field-validation-error"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex gap-2 mt-4">
+        <button type="submit" class="btn btn-primary @(esNuevo ? "" : "js-confirmar")"
+                data-confirmar="@(esNuevo ? null : "¿Estás seguro que deseas actualizar los datos del cliente?")">
+            Guardar
+        </button>
+        <a href="/Mantenimiento/Clientes" class="btn btn-outline-gs">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

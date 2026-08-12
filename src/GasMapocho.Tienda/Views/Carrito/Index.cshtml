@@ -1,0 +1,111 @@
+@model List<LineaVm>
+@{
+    var subtotal = GasMapocho.Tienda.Models.Carrito.Subtotal(Model);
+    var despacho = GasMapocho.Tienda.Models.Carrito.Despacho(Model);
+    var total = GasMapocho.Tienda.Models.Carrito.Total(Model);
+}
+
+<h1 class="mb-4">Tu carrito</h1>
+
+@if (!Model.Any())
+{
+    <div class="card-gs">
+        <partial name="_EstadoVacio"
+                 model="@(new EstadoVacioVm("shopping_cart", "Tu carrito está vacío",
+                          "Agrega un balón de gas desde el catálogo para continuar.",
+                          "Ver catálogo", "/Catalogo"))" />
+    </div>
+}
+else
+{
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="tabla-gs-wrap">
+                <table class="tabla-gs">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th style="width:150px">Cantidad</th>
+                            <th class="num" style="width:120px">Precio</th>
+                            <th style="width:60px"><span class="visually-hidden">Acciones</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var l in Model)
+                        {
+                            <tr data-id="@l.IdProducto">
+                                <td data-label="Producto">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="thumb thumb-sm">
+                                            <img src="~/_content/GasMapocho.Ui/img/producto-placeholder.svg"
+                                                 alt="" aria-hidden="true" loading="lazy" />
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold text-navy">@l.Nombre</div>
+                                            <div class="text-muted-gs" style="font-size:var(--fs-xs)">@l.CapacidadKg kg</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Cantidad">
+                                    <div class="cantidad-control">
+                                        <button type="button" class="btn js-menos" aria-label="Disminuir">−</button>
+                                        <input type="number" class="js-cant" value="@l.Cantidad" min="0"
+                                               aria-label="Cantidad de @l.Nombre" />
+                                        <button type="button" class="btn js-mas" aria-label="Aumentar">+</button>
+                                    </div>
+                                </td>
+                                <td data-label="Precio" class="num">@l.PrecioUnitario.ToString("C0")</td>
+                                <td class="sin-label">
+                                    <div class="acciones">
+                                        <button type="button" class="btn btn-outline-danger-gs js-quitar"
+                                                aria-label="Quitar @l.Nombre del carrito">
+                                            <span class="material-symbols-outlined icon-20" aria-hidden="true">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="/Catalogo" class="btn btn-outline-gs mt-3">
+                <span class="material-symbols-outlined icon-20" aria-hidden="true">arrow_back</span>
+                Seguir comprando
+            </a>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card-gs resumen-carrito">
+                <div class="card-gs-body">
+                    <h2 style="font-size:var(--fs-h3)" class="mb-3">Resumen</h2>
+
+                    <div class="resumen-linea">
+                        <span>Subtotal</span>
+                        <span class="num js-subtotal">@subtotal.ToString("C0")</span>
+                    </div>
+                    <div class="resumen-linea">
+                        <span>Despacho</span>
+                        <span class="num js-despacho">@despacho.ToString("C0")</span>
+                    </div>
+                    <div class="resumen-total">
+                        <span class="fw-bold text-navy">Total</span>
+                        <span class="valor js-total">@total.ToString("C0")</span>
+                    </div>
+
+                    <a href="/Pedido/Checkout" class="btn btn-primary w-100 mt-4">Continuar</a>
+
+                    <p class="text-muted-gs mt-3 mb-0" style="font-size:var(--fs-xs)">
+                        El despacho se calcula sobre el total del pedido.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="toast-container-gs" id="avisos" aria-live="polite" aria-atomic="true"></div>
+
+@section Scripts {
+    <script src="~/js/carrito.js" asp-append-version="true"></script>
+}

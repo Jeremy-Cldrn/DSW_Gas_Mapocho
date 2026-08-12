@@ -1,0 +1,29 @@
+@model PedidoVm
+@{
+    var id = (int)(ViewData["IdPedido"] ?? 0);
+}
+
+<div class="pasos" aria-label="Progreso de la compra">
+    <div class="paso hecho"><span class="n" aria-hidden="true">✓</span> Carrito</div>
+    <div class="paso hecho"><span class="n" aria-hidden="true">✓</span> Entrega y pago</div>
+    <div class="paso activo" aria-current="step"><span class="n">3</span> Confirmación</div>
+</div>
+
+<div class="card-gs mx-auto" style="max-width:640px">
+    <div class="card-gs-body text-center py-5">
+        <div class="confirmacion-icono">
+            <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+        </div>
+
+        <h1 class="mb-2">¡Tu pedido quedó registrado!</h1>
+        <p class="text-muted-gs mb-1">
+            Pedido <strong class="text-navy">PED-@id.ToString("D5")</strong>
+        </p>
+        <p class="mb-4">¡Gracias por tu compra!</p>
+
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+            <a href="/MisCompras" class="btn btn-primary">Ver mis compras</a>
+            <a href="/Catalogo" class="btn btn-outline-gs">Seguir comprando</a>
+        </div>
+    </div>
+</div>

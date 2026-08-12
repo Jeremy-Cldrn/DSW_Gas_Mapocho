@@ -1,0 +1,42 @@
+@model TablaVm
+@*
+    Los tres mantenimientos usan esta misma vista. Solo cambia el TablaVm
+    que arma el controlador.
+*@
+<partial name="_Tabla" model="Model" />
+
+@if (ViewData["Kpis"] is true)
+{
+    @* Solo Productos activa esto: son los mismos 3 indicadores que antes
+       vivían en Reportes/Inventario (§7.2 pide mantenerlos junto al
+       mantenimiento, no en una pantalla aparte). *@
+    <div class="row g-4 mt-1">
+        <div class="col-md-4">
+            <div class="kpi">
+                <div class="kpi-icono"><span class="material-symbols-outlined icon-24" aria-hidden="true">inventory_2</span></div>
+                <div>
+                    <div class="kpi-label">Productos</div>
+                    <div class="kpi-valor">@ViewData["TotalProductos"]</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="kpi">
+                <div class="kpi-icono"><span class="material-symbols-outlined icon-24" aria-hidden="true">propane_tank</span></div>
+                <div>
+                    <div class="kpi-label">Stock total</div>
+                    <div class="kpi-valor">@ViewData["UnidadesStock"]</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="kpi">
+                <div class="kpi-icono"><span class="material-symbols-outlined icon-24" aria-hidden="true">savings</span></div>
+                <div>
+                    <div class="kpi-label">Valor del inventario</div>
+                    <div class="kpi-valor">@(((decimal)ViewData["ValorInventario"]!).ToString("C0"))</div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

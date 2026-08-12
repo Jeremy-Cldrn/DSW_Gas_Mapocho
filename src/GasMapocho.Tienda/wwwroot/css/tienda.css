@@ -1,0 +1,263 @@
+/* ============================================================
+   Estilos propios de la Tienda.
+   Lo compartido con el Admin vive en GasMapocho.Ui.
+   ============================================================ */
+
+.skip-link {
+  position: absolute; top: var(--sp-2); left: var(--sp-2); z-index: 1100;
+  background: var(--gs-white); padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+  color: var(--gs-primary-700); font-weight: 600;
+}
+
+/* --- Cabecera ----------------------------------------------- */
+.cabecera {
+  background: var(--gs-white);
+  border-bottom: 1px solid var(--gs-gray-200);
+  position: sticky; top: 0; z-index: 1030;
+  box-shadow: var(--shadow-sm);
+}
+.cabecera-inner {
+  display: flex; align-items: center; gap: var(--sp-4);
+  min-height: var(--header-h);
+}
+.nav-principal { display: flex; gap: var(--sp-2); margin-left: auto; }
+.nav-principal a {
+  color: var(--gs-gray-700); text-decoration: none;
+  padding: var(--sp-2) var(--sp-3); border-radius: var(--radius-md);
+  font-weight: 600; font-size: var(--fs-sm);
+}
+.nav-principal a:hover { background: var(--gs-gray-100); color: var(--gs-navy); }
+.nav-principal a.activo { color: var(--gs-primary-700); background: var(--gs-primary-50); }
+
+.cabecera-acciones { display: flex; align-items: center; gap: var(--sp-1); }
+
+.carrito-btn { position: relative; }
+.carrito-contador {
+  background: var(--gs-red-600); color: var(--gs-white);
+  border-radius: var(--radius-pill);
+  min-width: 22px; height: 22px; padding: 0 6px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: var(--fs-xs); font-weight: 700;
+}
+.carrito-contador.vacio { background: var(--gs-gray-400); }
+
+@media (max-width: 575.98px) {
+  .nav-principal { order: 3; width: 100%; margin-left: 0; justify-content: center;
+                   border-top: 1px solid var(--gs-gray-200); padding-top: var(--sp-2); }
+  .cabecera-inner { flex-wrap: wrap; padding-bottom: var(--sp-2); }
+  .cabecera-acciones { margin-left: auto; }
+}
+
+/* --- Pie ---------------------------------------------------- */
+.pie {
+  background: var(--gs-primary-700);
+  padding: var(--sp-5) 0;
+  margin-top: var(--sp-8);
+  color: var(--gs-white);
+  font-size: var(--fs-sm);
+}
+.pie-etiqueta {
+  font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--gs-white);
+}
+
+/* --- Pantalla de acceso ------------------------------------- */
+.pantalla-auth {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  background: var(--gs-white);
+}
+.auth-main { flex: 1; display: flex; align-items: center; padding: var(--sp-7) 0; }
+
+/* Tarjeta centrada, sin ilustración: sin la foto real del producto,
+   una caja gris grande al lado se ve peor que no poner nada. */
+.login-card {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--sp-6);
+  max-width: 420px;
+  margin: 0 auto;
+}
+.login-marca { text-align: center; margin-bottom: var(--sp-5); }
+/* --- Catálogo ----------------------------------------------- */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-5);
+}
+
+/* Miniatura de producto en carrito, checkout e historial */
+.thumb {
+  width: 56px; height: 56px; flex: 0 0 auto;
+  background: var(--gs-gray-100);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.thumb img { height: 46px; width: auto; }
+.thumb-sm { width: 44px; height: 44px; }
+.thumb-sm img { height: 36px; }
+
+/* --- Carrito ------------------------------------------------ */
+.resumen-carrito { position: sticky; top: calc(var(--header-h) + var(--sp-4)); }
+.resumen-linea {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: var(--sp-2) 0; font-size: var(--fs-sm);
+}
+.resumen-total {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-top: var(--sp-3); margin-top: var(--sp-2);
+  border-top: 1px solid var(--gs-gray-200);
+}
+.resumen-total .valor {
+  font-family: var(--gs-font-heading); font-size: var(--fs-h2);
+  font-weight: 700; color: var(--gs-navy); font-variant-numeric: tabular-nums;
+}
+
+.cantidad-control { display: inline-flex; align-items: center; gap: 0; }
+.cantidad-control .btn {
+  min-height: 38px; min-width: 38px; padding: 0;
+  border-radius: var(--radius-md); border: 1px solid var(--gs-gray-300);
+  background: var(--gs-white);
+}
+.cantidad-control input {
+  width: 56px; text-align: center; border: 1px solid var(--gs-gray-300);
+  border-left: 0; border-right: 0; min-height: 38px; border-radius: 0;
+  font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.cantidad-control .btn:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.cantidad-control .btn:last-child  { border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+
+/* --- Checkout por pasos ------------------------------------- */
+.pasos { display: flex; gap: var(--sp-2); margin-bottom: var(--sp-6); flex-wrap: wrap; }
+.paso {
+  display: flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-pill);
+  background: var(--gs-gray-100); color: var(--gs-gray-600);
+  font-size: var(--fs-sm); font-weight: 600;
+}
+.paso .n {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--gs-gray-300); color: var(--gs-white);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: var(--fs-xs);
+}
+.paso.activo { background: var(--gs-primary-50); color: var(--gs-primary-700); }
+.paso.activo .n { background: var(--gs-primary-700); }
+.paso.hecho { background: var(--gs-aprob-bg); color: var(--gs-aprob-fg); }
+.paso.hecho .n { background: var(--gs-success); }
+
+/* --- Confirmación ------------------------------------------- */
+.confirmacion-icono {
+  width: 88px; height: 88px; border-radius: 50%;
+  background: var(--gs-aprob-bg); color: var(--gs-aprob-fg);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto var(--sp-4);
+}
+.confirmacion-icono .material-symbols-outlined { font-size: 48px; }
+
+/* --- Historial: tarjetas de pedido, no tabla ---------------- */
+.pedido-card {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Banda de seguimiento: lo primero que se lee */
+.pedido-seguimiento {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-5);
+  border-bottom: 1px solid var(--gs-gray-200);
+}
+.pedido-seguimiento .titulo { font-weight: 700; font-size: var(--fs-sm); }
+.pedido-seguimiento .detalle { font-size: var(--fs-sm); opacity: .9; }
+
+.seguimiento-pendiente { background: var(--gs-pend-bg);  color: var(--gs-pend-fg); }
+.seguimiento-aprobado  { background: var(--gs-aprob-bg); color: var(--gs-aprob-fg); }
+.seguimiento-rechazado { background: var(--gs-rech-bg);  color: var(--gs-rech-fg); }
+
+.pedido-body { padding: var(--sp-5); }
+
+.pedido-meta {
+  display: flex; flex-wrap: wrap; gap: var(--sp-5);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--gs-gray-200);
+}
+.pedido-meta .etiqueta {
+  display: block; font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--gs-gray-600);
+}
+.pedido-meta .valor { font-weight: 600; color: var(--gs-navy); }
+.pedido-meta .valor.total {
+  font-family: var(--gs-font-heading); font-size: var(--fs-h3);
+  font-variant-numeric: tabular-nums;
+}
+
+.pedido-productos { padding: var(--sp-3) 0; }
+.pedido-linea {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+}
+
+.pedido-pie {
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
+  align-items: center; justify-content: space-between;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--gs-gray-200);
+}
+
+.pedido-detalle {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--gs-gray-200);
+}
+.pedido-detalle .etiqueta {
+  font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--gs-gray-600);
+}
+
+@media (max-width: 575.98px) {
+  .pedido-body { padding: var(--sp-4); }
+  .pedido-meta { gap: var(--sp-4); }
+  .pedido-meta > div { min-width: 45%; }
+  .pedido-meta .ms-md-auto { text-align: left !important; }
+  .pedido-pie .btn { flex: 1 1 100%; }
+}
+
+/* --- Botón flotante de WhatsApp -------------------------------
+   Color de marca (celeste), no verde WhatsApp: así no desentona con
+   la identidad de Gas Mapocho (regla del encargo). */
+.whatsapp-flotante {
+  position: fixed;
+  right: var(--sp-4);
+  bottom: var(--sp-4);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: var(--gs-primary-700);
+  color: var(--gs-white);
+  box-shadow: var(--shadow-lg);
+  z-index: 1030;
+  transition: transform .15s ease, background .15s ease;
+}
+.whatsapp-flotante:hover,
+.whatsapp-flotante:focus-visible {
+  background: var(--gs-primary-600);
+  color: var(--gs-white);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 575.98px) {
+  .whatsapp-flotante { right: var(--sp-3); bottom: var(--sp-3); width: 48px; height: 48px; }
+  .whatsapp-flotante svg { width: 24px; height: 24px; }
+}

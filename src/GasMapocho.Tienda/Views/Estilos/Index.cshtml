@@ -1,0 +1,289 @@
+@{
+    (string nombre, string variable, string hex, string uso, string contraste)[] colores = new[]
+    {
+        ("Cian del logo",   "--gs-cyan",        "#00A1DE", "Símbolo del logotipo", "—"),
+        ("Rojo del logo",   "--gs-red",         "#ED2939", "Logotipo \"gasco\"",   "4.22:1 ✗"),
+        ("Primario UI",     "--gs-primary-500", "#00A3E0", "Franjas y gráficos",   "2.87:1 ✗"),
+        ("Primario texto",  "--gs-primary-700", "#0077A5", "Botones y enlaces",    "5.02:1 ✓"),
+        ("Conversión",      "--gs-red-600",     "#D81E2C", "Botón de compra",      "5.07:1 ✓"),
+        ("Navy",            "--gs-navy",        "#072531", "Titulares",            "15.93:1 ✓"),
+        ("Texto cuerpo",    "--gs-gray-700",    "#4D4D4D", "Párrafos",             "8.45:1 ✓"),
+        ("Texto secundario","--gs-gray-600",    "#575756", "Ayudas y subtítulos",  "7.23:1 ✓"),
+        ("Gris borde",      "--gs-gray-400",    "#8D8F90", "Bordes e iconos",      "2.90:1 ✗"),
+    };
+}
+
+<h1 class="mb-1">Design system</h1>
+<p class="text-muted-gs mb-5">
+    Todos los componentes en una pantalla. Sirve para revisar el diseño completo
+    antes de que esté repartido en diez vistas.
+</p>
+
+<!-- ============ COLOR ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Color</h2>
+    <div class="alerta-gs alerta-info mb-4">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">info</span>
+        <span>
+            Los contrastes están calculados con WCAG 2.1. Los marcados con ✗ <strong>no</strong>
+            alcanzan AA con texto blanco: por eso los botones usan <code>--gs-primary-700</code>
+            y <code>--gs-red-600</code>, y no los colores de marca.
+        </span>
+    </div>
+
+    <div class="tabla-gs-wrap">
+        <table class="tabla-gs">
+            <thead>
+                <tr>
+                    <th style="width:80px">Muestra</th>
+                    <th>Token</th>
+                    <th style="width:110px">Hex</th>
+                    <th>Uso</th>
+                    <th style="width:120px">Contraste</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in colores)
+                {
+                    <tr>
+                        <td data-label="Muestra">
+                            <span style="display:inline-block;width:44px;height:28px;border-radius:6px;border:1px solid var(--gs-gray-300);background:@c.hex"></span>
+                        </td>
+                        <td data-label="Token"><code>@c.variable</code><div class="text-muted-gs" style="font-size:var(--fs-xs)">@c.nombre</div></td>
+                        <td data-label="Hex"><code>@c.hex</code></td>
+                        <td data-label="Uso">@c.uso</td>
+                        <td data-label="Contraste"><span class="num">@c.contraste</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ============ TIPOGRAFÍA ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Tipografía</h2>
+    <div class="card-gs"><div class="card-gs-body">
+        <div class="h-display" style="font-size:var(--fs-display);line-height:var(--lh-display)">Display 40 · Montserrat 700</div>
+        <h1>Título 1 · 32 px</h1>
+        <h2>Título 2 · 24 px</h2>
+        <h3>Título 3 · 20 px</h3>
+        <p class="mb-1">Cuerpo 16 px · Mulish 400. El precio del balón de 11 kg es @((21000m).ToString("C0")).</p>
+        <p class="text-muted-gs mb-1" style="font-size:var(--fs-sm)">Secundario 14 px · para ayudas y subtítulos.</p>
+        <p class="mb-0" style="font-size:var(--fs-xs);font-weight:600;letter-spacing:.04em;text-transform:uppercase">Etiqueta 12 px</p>
+    </div></div>
+</section>
+
+<!-- ============ BOTONES ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Botones</h2>
+    <div class="card-gs"><div class="card-gs-body">
+        <div class="d-flex flex-wrap gap-3 mb-3">
+            <button class="btn btn-primary">Primario</button>
+            <button class="btn btn-conversion">Conversión</button>
+            <button class="btn btn-outline-gs">Secundario</button>
+            <button class="btn btn-outline-danger-gs">Peligro</button>
+            <button class="btn btn-ghost">
+                <span class="material-symbols-outlined icon-20" aria-hidden="true">edit</span> Fantasma
+            </button>
+            <button class="btn btn-primary" disabled>Deshabilitado</button>
+        </div>
+        <p class="text-muted-gs mb-0" style="font-size:var(--fs-sm)">
+            Todos con <code>min-height: 44px</code> (área táctil mínima).
+            <strong>Un solo botón de conversión por pantalla</strong>: si hay dos rojos, ninguno destaca.
+            Prueba el foco con <kbd>Tab</kbd>.
+        </p>
+    </div></div>
+</section>
+
+<!-- ============ FORMULARIOS ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Formularios</h2>
+    <div class="card-gs"><div class="card-gs-body">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label" for="d1">Campo normal <span class="req">*</span></label>
+                <input class="form-control" id="d1" placeholder="Escribe aquí" />
+                <div class="form-text">Texto de ayuda bajo el campo.</div>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label" for="d2">Campo con error <span class="req">*</span></label>
+                <input class="form-control is-invalid" id="d2" value="correo-malo" />
+                <span class="invalid-feedback">El correo no tiene un formato válido.</span>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label" for="d3">Precio (solo dígitos)</label>
+                <input class="form-control" id="d3" type="number" step="1" value="14500" />
+                <div class="form-text">Sin puntos: <code>es-CL</code> los leería como decimales.</div>
+            </div>
+        </div>
+        <p class="text-muted-gs mt-3 mb-0" style="font-size:var(--fs-sm)">
+            La etiqueta va <strong>siempre visible arriba</strong>: el placeholder desaparece al
+            escribir y el usuario pierde la referencia. El error se comunica en texto, no solo
+            con el borde rojo.
+        </p>
+    </div></div>
+</section>
+
+<!-- ============ BADGES Y STOCK ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Estados</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card-gs h-100"><div class="card-gs-body">
+                <h3 class="mb-3" style="font-size:var(--fs-body)">Estado del pedido</h3>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <partial name="_BadgeEstado" model="@("Pendiente")" />
+                    <partial name="_BadgeEstado" model="@("Aprobado")" />
+                    <partial name="_BadgeEstado" model="@("Rechazado")" />
+                </div>
+                <p class="text-muted-gs mb-0" style="font-size:var(--fs-sm)">
+                    Texto oscuro sobre fondo claro (6.27 / 6.54 / 6.71:1). Los colores de marca
+                    saturados no alcanzan contraste con blanco. Llevan <strong>texto además de
+                    color</strong>, para quien no distingue rojo de verde.
+                </p>
+            </div></div>
+        </div>
+        <div class="col-md-6">
+            <div class="card-gs h-100"><div class="card-gs-body">
+                <h3 class="mb-3" style="font-size:var(--fs-body)">Indicador de stock</h3>
+                <div class="d-flex flex-column gap-2 mb-3">
+                    <span class="stock-ind stock-ok">Disponible</span>
+                    <span class="stock-ind stock-bajo">Últimas 6 unidades</span>
+                    <span class="stock-ind stock-cero">Sin stock</span>
+                </div>
+                <p class="text-muted-gs mb-0" style="font-size:var(--fs-sm)">
+                    El punto de color acompaña al texto; nunca lo reemplaza.
+                </p>
+            </div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TARJETA DE PRODUCTO ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Tarjeta de producto</h2>
+    <p class="text-muted-gs mb-3" style="font-size:var(--fs-sm)">
+        Los tres estados de inventario. En el catálogo real los tres productos tienen stock,
+        pero el manejo de <strong>stock bajo</strong> y <strong>sin stock</strong> está
+        implementado y se revisa aquí. La estructura de la tarjeta es idéntica en los tres
+        casos: <strong>la grilla queda alineada sea cual sea el inventario</strong>.
+    </p>
+
+    @{
+        var variantes = new List<ProductoVm>
+        {
+            new() { Id = 1, Codigo = "BAL-05", Nombre = "Balón de gas 5 kg",  CapacidadKg = 5,  Precio = 14500, Stock = 24 },
+            new() { Id = 2, Codigo = "BAL-11", Nombre = "Balón de gas 11 kg", CapacidadKg = 11, Precio = 21000, Stock = 6  },
+            new() { Id = 3, Codigo = "BAL-15", Nombre = "Balón de gas 15 kg", CapacidadKg = 15, Precio = 28900, Stock = 0  },
+        };
+    }
+    <partial name="~/Views/Catalogo/_Grilla.cshtml" model="variantes" />
+</section>
+
+<!-- ============ KPI ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Indicadores</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="kpi">
+                <div class="kpi-icono"><span class="material-symbols-outlined icon-24" aria-hidden="true">receipt</span></div>
+                <div><div class="kpi-label">Ventas confirmadas</div><div class="kpi-valor">150</div></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="kpi">
+                <div class="kpi-icono"><span class="material-symbols-outlined icon-24" aria-hidden="true">payments</span></div>
+                <div><div class="kpi-label">Venta total del mes</div><div class="kpi-valor">@((1284500m).ToString("C0"))</div></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="kpi">
+                <div class="kpi-icono"><span class="material-symbols-outlined icon-24" aria-hidden="true">propane_tank</span></div>
+                <div><div class="kpi-label">Balones en bodega</div><div class="kpi-valor">30</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ALERTAS ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Alertas</h2>
+    <div class="d-flex flex-column gap-3">
+        <div class="alerta-gs alerta-ok"><span class="material-symbols-outlined icon-20" aria-hidden="true">check_circle</span><span>Tu pedido quedó registrado correctamente.</span></div>
+        <div class="alerta-gs alerta-info"><span class="material-symbols-outlined icon-20" aria-hidden="true">info</span><span>El pedido está Pendiente hasta que validemos el pago.</span></div>
+        <div class="alerta-gs alerta-warn"><span class="material-symbols-outlined icon-20" aria-hidden="true">warning</span><span>Solo quedan 2 unidades disponibles.</span></div>
+        <div class="alerta-gs alerta-error"><span class="material-symbols-outlined icon-20" aria-hidden="true">error</span><span>Correo o contraseña incorrectos.</span></div>
+    </div>
+</section>
+
+<!-- ============ ESTADO VACÍO ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Estado vacío</h2>
+    <div class="card-gs">
+        <partial name="_EstadoVacio"
+                 model="@(new EstadoVacioVm("receipt_long", "Aún no has realizado compras",
+                          "Cuando pidas tu primer balón de gas, aparecerá aquí.",
+                          "Ver catálogo", "/Catalogo"))" />
+    </div>
+    <p class="text-muted-gs mt-2 mb-0" style="font-size:var(--fs-sm)">
+        Icono + una frase + botón. <strong>Nunca una tabla vacía sin explicación.</strong>
+    </p>
+</section>
+
+<!-- ============ TABLA ============ -->
+<section class="mb-5">
+    <h2 class="mb-3">Tabla</h2>
+    <div class="tabla-gs-wrap">
+        <table class="tabla-gs">
+            <thead>
+                <tr>
+                    <th style="width:120px">Pedido</th>
+                    <th>Cliente</th>
+                    <th style="width:130px">Estado</th>
+                    <th class="num" style="width:130px">Monto</th>
+                </tr>
+            </thead>
+            <tbody>
+                @*
+                    Filas de muestra escritas aquí a propósito: esta página es una
+                    herramienta de diseño y debe verse igual aunque la API esté caída
+                    o la base vacía. No es parte del sistema entregado.
+                *@
+                @{
+                    var filasMuestra = new[]
+                    {
+                        new { Codigo = "PED-00001", Cliente = "Juan Pérez",      Estado = "Pendiente", Total = 31500m },
+                        new { Codigo = "PED-00002", Cliente = "María González",  Estado = "Pendiente", Total = 38000m },
+                        new { Codigo = "PED-00003", Cliente = "Carlos Muñoz",    Estado = "Aprobado",  Total = 31400m },
+                        new { Codigo = "PED-00005", Cliente = "Pedro Silva",     Estado = "Rechazado", Total = 44500m }
+                    };
+                }
+                @foreach (var p in filasMuestra)
+                {
+                    <tr>
+                        <td data-label="Pedido"><span class="fw-bold text-navy">@p.Codigo</span></td>
+                        <td data-label="Cliente">@p.Cliente</td>
+                        <td data-label="Estado"><partial name="_BadgeEstado" model="@p.Estado" /></td>
+                        <td data-label="Monto" class="num fw-bold text-navy">@p.Total.ToString("C0")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="tabla-footer">
+            <span class="text-muted-gs" style="font-size:var(--fs-sm)">Mostrando 1 a 4 de 14</span>
+            <nav class="paginacion" aria-label="Ejemplo de paginación">
+                <span class="pag deshabilitada">Anterior</span>
+                <span class="pag activa">1</span>
+                <a href="#" class="pag">2</a>
+                <a href="#" class="pag">3</a>
+                <a href="#" class="pag">Siguiente</a>
+            </nav>
+        </div>
+    </div>
+    <p class="text-muted-gs mt-2 mb-0" style="font-size:var(--fs-sm)">
+        Montos a la derecha con cifras tabulares, para comparar columnas de un vistazo.
+        <strong>Reduce la ventana a menos de 576 px:</strong> la tabla se convierte en tarjetas
+        apiladas, no en scroll horizontal.
+    </p>
+</section>

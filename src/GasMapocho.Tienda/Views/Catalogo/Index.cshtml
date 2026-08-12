@@ -1,0 +1,17 @@
+@model List<ProductoVm>
+
+<div class="mb-4">
+    <h1 class="mb-1">Catálogo</h1>
+    <p class="text-muted-gs mb-0">Elige el balón que necesitas y pídelo en minutos.</p>
+</div>
+
+<div id="grilla" aria-live="polite">
+    <partial name="_Grilla" model="Model" />
+</div>
+
+@* Contenedor de avisos: se anuncia a lectores de pantalla sin robar el foco *@
+<div class="toast-container-gs" id="avisos" aria-live="polite" aria-atomic="true"></div>
+
+@section Scripts {
+    <script src="~/js/catalogo.js" asp-append-version="true"></script>
+}

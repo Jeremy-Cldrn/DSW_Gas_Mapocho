@@ -1,0 +1,97 @@
+@model List<PedidoVm>
+@*
+    Historial del cliente como tarjetas de pedido, no como tabla de datos.
+    Quien entra aquí quiere saber "¿dónde está mi gas?", no consultar registros.
+    El estado sigue estando (CU-03 lo pide), pero contado en lenguaje de cliente.
+*@
+
+<div class="mb-4">
+    <h1 class="mb-1">Mis compras</h1>
+    <p class="text-muted-gs mb-0">Sigue el estado de tus pedidos.</p>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="card-gs">
+        <partial name="_EstadoVacio"
+                 model="@(new EstadoVacioVm("local_shipping", "Aún no has realizado compras",
+                          "Cuando pidas tu primer balón de gas, aparecerá aquí.",
+                          "Ver catálogo", "/Catalogo"))" />
+    </div>
+}
+else
+{
+    <div class="d-flex flex-column gap-4">
+        @foreach (var p in Model)
+        {
+            <article class="pedido-card">
+
+                <div class="pedido-body">
+                    <div class="pedido-meta">
+                        <div>
+                            <span class="etiqueta">Pedido</span>
+                            <span class="valor">@p.Codigo</span>
+                        </div>
+                        <div>
+                            <span class="etiqueta">Fecha</span>
+                            <span class="valor">@p.Fecha.ToString("dd/MM/yyyy")</span>
+                        </div>
+                        <div class="ms-md-auto text-md-end">
+                            <span class="etiqueta">Total</span>
+                            <span class="valor total">@p.Total.ToString("C0")</span>
+                        </div>
+                    </div>
+
+                    <div class="pedido-productos">
+                        @foreach (var l in p.Lineas)
+                        {
+                            <div class="pedido-linea">
+                                <div class="thumb">
+                                    <img src="~/_content/GasMapocho.Ui/img/producto-placeholder.svg"
+                                         alt="" aria-hidden="true" loading="lazy" />
+                                </div>
+                                <div class="flex-fill">
+                                    <div class="fw-bold text-navy">@l.Nombre</div>
+                                    <div class="text-muted-gs" style="font-size:var(--fs-sm)">
+                                        Cantidad: @l.Cantidad
+                                    </div>
+                                </div>
+                                <div class="num fw-bold text-navy">@l.Subtotal.ToString("C0")</div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="pedido-pie">
+                        <button type="button" class="btn btn-ghost js-detalle"
+                                aria-expanded="false" aria-controls="det-@p.Id">
+                            <span class="material-symbols-outlined icon-20" aria-hidden="true">expand_more</span>
+                            Ver detalle de pago
+                        </button>
+                    </div>
+
+                    <div id="det-@p.Id" class="pedido-detalle" hidden>
+                        <h3 class="etiqueta mb-2">Pago</h3>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div>
+                                <span class="etiqueta">Subtotal</span>
+                                <span class="d-block fw-bold text-navy">@p.Subtotal.ToString("C0")</span>
+                            </div>
+                            <div>
+                                <span class="etiqueta">Despacho</span>
+                                <span class="d-block fw-bold text-navy">@p.Despacho.ToString("C0")</span>
+                            </div>
+                            <div>
+                                <span class="etiqueta">Total</span>
+                                <span class="d-block fw-bold text-navy">@p.Total.ToString("C0")</span>
+                            </div>
+                            <div class="ms-md-auto text-md-end">
+                                <span class="etiqueta">Método de pago</span>
+                                <span class="d-block fw-bold text-navy">@p.MetodoPago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+}

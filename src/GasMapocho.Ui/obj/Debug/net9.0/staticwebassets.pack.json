@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\css\\componentes.css",
+      "PackagePath": "staticwebassets\\css\\componentes.css"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\css\\tokens.css",
+      "PackagePath": "staticwebassets\\css\\tokens.css"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\logoGasco2024.png",
+      "PackagePath": "staticwebassets\\img\\logoGasco2024.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\producto-placeholder.svg",
+      "PackagePath": "staticwebassets\\img\\producto-placeholder.svg"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\js\\formato.js",
+      "PackagePath": "staticwebassets\\js\\formato.js"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\js\\tabla.js",
+      "PackagePath": "staticwebassets\\js\\tabla.js"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.GasMapocho.Ui.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.GasMapocho.Ui.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.GasMapocho.Ui.props",
+      "PackagePath": "build\\GasMapocho.Ui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.GasMapocho.Ui.props",
+      "PackagePath": "buildMultiTargeting\\GasMapocho.Ui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.GasMapocho.Ui.props",
+      "PackagePath": "buildTransitive\\GasMapocho.Ui.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

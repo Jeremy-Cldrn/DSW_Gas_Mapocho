@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "GasMapocho.Api.Grpc";
+
+package producto;
+
+// Consulta puntual de un producto. gRPC usa un contrato binario, mas rapido
+// que JSON cuando se hacen muchas consultas seguidas de stock y precio.
+service ProductoGrpc {
+  rpc ConsultarProducto (ProductoRequest) returns (ProductoReply);
+}
+
+message ProductoRequest {
+  int32 id_producto = 1;
+}
+
+message ProductoReply {
+  int32  id_producto = 1;
+  string codigo      = 2;
+  string nombre      = 3;
+  double precio      = 4;
+  int32  stock       = 5;
+  bool   encontrado  = 6;
+}

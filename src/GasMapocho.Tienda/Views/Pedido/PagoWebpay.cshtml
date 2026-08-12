@@ -1,0 +1,106 @@
+@model GasMapocho.Tienda.Controllers.PagoWebpayVm
+@{
+    var lineas = GasMapocho.Tienda.Models.Carrito.Leer(Context.Session);
+    var subtotal = GasMapocho.Tienda.Models.Carrito.Subtotal(lineas);
+    var despacho = GasMapocho.Tienda.Models.Carrito.Despacho(lineas);
+    var total = GasMapocho.Tienda.Models.Carrito.Total(lineas);
+}
+
+<div class="pasos" aria-label="Progreso de la compra">
+    <div class="paso hecho"><span class="n" aria-hidden="true">✓</span> Carrito</div>
+    <div class="paso hecho"><span class="n" aria-hidden="true">✓</span> Entrega y pago</div>
+    <div class="paso activo" aria-current="step"><span class="n">3</span> Pago Webpay</div>
+</div>
+
+<h1 class="mb-1">Pago con Webpay</h1>
+<p class="text-muted-gs mb-4" style="font-size:var(--fs-sm)">
+    Simulación educativa: no se realiza ninguna transacción real ni se contacta a Webpay.
+</p>
+
+<form asp-action="PagoWebpay" method="post" novalidate id="form-webpay">
+    @Html.AntiForgeryToken()
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card-gs">
+                <div class="card-gs-body">
+                    <p class="text-muted-gs mb-4" style="font-size:var(--fs-sm)">
+                        Los campos marcados con <span class="req">*</span> son obligatorios.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label asp-for="NumeroTarjeta" class="form-label">
+                                Número de tarjeta <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="NumeroTarjeta" class="form-control" inputmode="numeric"
+                                   placeholder="4051 8856 0044 6623" autocomplete="cc-number" />
+                            <span asp-validation-for="NumeroTarjeta" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-12">
+                            <label asp-for="Titular" class="form-label">
+                                Nombre del titular <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Titular" class="form-control" autocomplete="cc-name" />
+                            <span asp-validation-for="Titular" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Vencimiento" class="form-label">
+                                Vencimiento <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Vencimiento" class="form-control" placeholder="MM/AA"
+                                   autocomplete="cc-exp" />
+                            <span asp-validation-for="Vencimiento" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Cvv" class="form-label">
+                                CVV <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Cvv" class="form-control" inputmode="numeric"
+                                   autocomplete="cc-csc" />
+                            <span asp-validation-for="Cvv" class="field-validation-error"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card-gs resumen-carrito">
+                <div class="card-gs-body">
+                    <h2 style="font-size:var(--fs-h3)" class="mb-3">Tu pedido</h2>
+
+                    <div class="resumen-linea">
+                        <span>Subtotal</span>
+                        <span class="num">@subtotal.ToString("C0")</span>
+                    </div>
+                    <div class="resumen-linea">
+                        <span>Despacho</span>
+                        <span class="num">@despacho.ToString("C0")</span>
+                    </div>
+                    <div class="resumen-total">
+                        <span class="fw-bold text-navy">Total</span>
+                        <span class="valor">@total.ToString("C0")</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-conversion w-100 mt-4" id="btn-pagar">Pagar</button>
+                    <a href="/Pedido/Checkout" class="btn btn-outline-gs w-100 mt-2">Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $('#form-webpay').on('submit', function () {
+            if ($(this).valid()) {
+                $('#btn-pagar').prop('disabled', true).text('Procesando…');
+            }
+        });
+    </script>
+}

@@ -1,0 +1,182 @@
+@model TablaVm
+@*
+    Plantilla única de listado: cabecera + buscador + tabla + paginación.
+    La búsqueda y la paginación las resuelve tabla.js (compartido en la RCL).
+*@
+
+<div class="pagina-cabecera">
+    <div>
+        <h1 class="mb-1">@Model.Titulo</h1>
+        <p>@Model.Subtitulo</p>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.TextoNuevo))
+    {
+        <a href="@Model.UrlNuevo" class="btn btn-primary">
+            <span class="material-symbols-outlined icon-20" aria-hidden="true">add</span>
+            @Model.TextoNuevo
+        </a>
+    }
+</div>
+
+<div class="js-tabla" data-por-pagina="@Model.PorPagina"
+     data-buscar-servidor="@Model.BuscarEnServidor.ToString().ToLowerInvariant()">
+
+    @* Estado vacío: se muestra cuando la búsqueda no arroja resultados *@
+    <div class="js-vacio card-gs" style="display:none">
+        <partial name="_EstadoVacio" model="Model.Vacio" />
+    </div>
+
+    @if (!Model.Filas.Any())
+    {
+        <div class="card-gs">
+            <partial name="_EstadoVacio" model="Model.Vacio" />
+        </div>
+    }
+    else
+    {
+        <div class="tabla-gs-wrap">
+            <div class="tabla-toolbar">
+                <div class="buscador">
+                    <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                    <label class="visually-hidden" for="buscar">@Model.PlaceholderBuscar</label>
+                    <input type="search" id="buscar" class="form-control js-buscar"
+                           placeholder="@Model.PlaceholderBuscar" autocomplete="off"
+                           value="@Model.Busqueda" />
+                </div>
+            </div>
+
+            <table class="tabla-gs">
+                <thead>
+                    <tr>
+                        @foreach (var c in Model.Columnas)
+                        {
+                            <th class="@(c.Numerica ? "num" : "")"
+                                style="@(c.Ancho is null ? "" : $"width:{c.Ancho}")">@c.Titulo</th>
+                        }
+                        @if (Model.ConAcciones)
+                        {
+                            <th style="width:140px"><span class="visually-hidden">Acciones</span></th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var f in Model.Filas)
+                    {
+                        <tr>
+                            @for (var i = 0; i < f.Celdas.Count; i++)
+                            {
+                                var celda = f.Celdas[i];
+                                var col = i < Model.Columnas.Count ? Model.Columnas[i].Titulo : "";
+                                <td data-label="@col" class="@(celda.Numerica ? "num" : "")">
+                                    @if (celda.Estado is not null)
+                                    {
+                                        <partial name="_BadgeEstado" model="@celda.Estado" />
+                                    }
+                                    else
+                                    {
+                                        <span class="@(celda.Fuerte ? "fw-bold text-navy" : "")">@celda.Texto</span>
+                                        @if (celda.Secundario is not null)
+                                        {
+                                            <div class="text-muted-gs" style="font-size:var(--fs-xs)">@celda.Secundario</div>
+                                        }
+                                    }
+                                </td>
+                            }
+
+                            @if (Model.ConAcciones)
+                            {
+                                <td class="sin-label">
+                                    <div class="acciones">
+                                        @if (f.DetalleModel is not null && Model.DetalleModal)
+                                        {
+                                            <button type="button" class="btn btn-ghost"
+                                                    data-bs-toggle="modal" data-bs-target="#det-@f.Id"
+                                                    aria-label="Ver detalle del registro @f.Id">
+                                                <span class="material-symbols-outlined icon-20" aria-hidden="true">receipt_long</span>
+                                            </button>
+                                        }
+                                        else if (f.DetalleModel is not null)
+                                        {
+                                            <button type="button" class="btn btn-ghost js-detalle"
+                                                    aria-expanded="false" aria-controls="det-@f.Id"
+                                                    aria-label="Ver detalle del registro @f.Id">
+                                                <span class="material-symbols-outlined icon-20" aria-hidden="true">expand_more</span>
+                                            </button>
+                                        }
+
+                                        @if (Model.UrlEditar is not null)
+                                        {
+                                            <a href="@string.Format(Model.UrlEditar, f.Id)" class="btn btn-ghost"
+                                               aria-label="Editar registro @f.Id">
+                                                <span class="material-symbols-outlined icon-20" aria-hidden="true">edit</span>
+                                            </a>
+                                        }
+
+                                        @if (Model.AccionEliminar is not null)
+                                        {
+                                            @* POST con antiforgery: una baja por GET se dispararía
+                                               con solo cargar la URL. *@
+                                            <form method="post" action="@Model.AccionEliminar" class="d-inline">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@f.Id" />
+                                                <button type="submit" class="btn btn-ghost js-confirmar"
+                                                        data-confirmar="@Model.ConfirmacionEliminar"
+                                                        aria-label="Dar de baja el registro @f.Id">
+                                                    <span class="material-symbols-outlined icon-20"
+                                                          style="color:var(--gs-red-600)" aria-hidden="true">delete</span>
+                                                </button>
+                                            </form>
+                                        }
+                                    </div>
+                                </td>
+                            }
+                        </tr>
+
+                        @if (f.DetalleModel is not null && Model.DetalleVista is not null && !Model.DetalleModal)
+                        {
+                            <tr class="detalle-fila" id="det-@f.Id" hidden>
+                                <td colspan="@(Model.Columnas.Count + (Model.ConAcciones ? 1 : 0))">
+                                    <div class="detalle-panel">
+                                        @* Parcial tipado: Razor codifica la salida por defecto *@
+                                        <partial name="@Model.DetalleVista" model="f.DetalleModel" />
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+
+            <div class="tabla-footer">
+                <span class="text-muted-gs js-info" style="font-size:var(--fs-sm)"></span>
+                <nav class="paginacion js-paginacion" aria-label="Paginación"></nav>
+            </div>
+        </div>
+
+        @if (Model.DetalleModal && Model.DetalleVista is not null)
+        {
+            @* El detalle vive como modal FUERA de la tabla: dentro de <tbody> no es HTML
+               válido y rompería el backdrop de Bootstrap. *@
+            @foreach (var f in Model.Filas.Where(fila => fila.DetalleModel is not null))
+            {
+                <div class="modal fade" id="det-@f.Id" tabindex="-1" aria-hidden="true"
+                     aria-labelledby="det-@(f.Id)-titulo">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="det-@(f.Id)-titulo" style="font-size:var(--fs-lg)">
+                                    Detalle
+                                </h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <partial name="@Model.DetalleVista" model="f.DetalleModel" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>

@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GasMapocho.Admin
+build_property.RootNamespace = GasMapocho.Admin
+build_property.ProjectDir = C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Account/RecuperarPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWN1cGVyYXJQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Account/RecuperarPasswordListo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWN1cGVyYXJQYXNzd29yZExpc3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Mantenimiento/FormCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xGb3JtQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Mantenimiento/FormProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xGb3JtUHJvZHVjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Mantenimiento/Listado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xMaXN0YWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Shared/_DetallePedido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZXRhbGxlUGVkaWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Shared/_LayoutAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Shared/_Tabla.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UYWJsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/Ventas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CIBERTEC/QUINTO CICLO/DESARROLLO DE SERVICIOS WEB I/PROYECTOS/Proyecto_final_DSW_I/src/GasMapocho.Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

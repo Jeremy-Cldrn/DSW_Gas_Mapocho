@@ -1,0 +1,44 @@
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.exe
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.deps.json
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.runtimeconfig.json
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.pdb
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\Google.Protobuf.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Core.Api.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Net.Client.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Net.Common.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.csproj.AssemblyReference.cache
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.AssemblyInfoInputs.cache
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.AssemblyInfo.cs
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.csproj.CoreCompileInputs.cache
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteG.1CC0D4A1.Up2Date
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\refint\ClienteGrpc.dll
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.pdb
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.genruntimeconfig.cache
+c:\Users\GamingWorld\Desktop\entrega-final_DS_WEB\src\ClienteGrpc\obj\Debug\net9.0\ref\ClienteGrpc.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.exe
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.deps.json
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.runtimeconfig.json
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.pdb
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\Google.Protobuf.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Core.Api.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Net.Client.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Net.Common.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.csproj.AssemblyReference.cache
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.GeneratedMSBuildEditorConfig.editorconfig
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.AssemblyInfoInputs.cache
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.AssemblyInfo.cs
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.csproj.CoreCompileInputs.cache
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteG.1CC0D4A1.Up2Date
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\refint\ClienteGrpc.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.pdb
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.genruntimeconfig.cache
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ref\ClienteGrpc.dll

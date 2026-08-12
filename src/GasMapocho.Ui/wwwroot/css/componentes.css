@@ -1,0 +1,456 @@
+/* ============================================================
+   Componentes compartidos — Gas Mapocho
+   Usa exclusivamente las variables de tokens.css.
+   ============================================================ */
+
+body {
+  font-family: var(--gs-font-base);
+  color: var(--gs-gray-700);
+  background: var(--gs-gray-50);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+h1, h2, h3, h4, .h-display {
+  font-family: var(--gs-font-heading);
+  color: var(--gs-navy);
+  font-weight: 700;
+}
+
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 600; }
+
+.text-muted-gs { color: var(--gs-gray-600) !important; }
+.text-navy      { color: var(--gs-navy) !important; }
+
+/* Cifras alineadas para comparar columnas de precios de un vistazo */
+.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+
+/* --- Marca ------------------------------------------------- */
+.brand-logo { height: 40px; width: auto; }
+.sidebar .brand-logo { height: 32px; }
+.login-card .brand-logo { height: 56px; }
+
+/* --- Botones ----------------------------------------------- */
+/* min-height 44px = área táctil mínima para dedos en móvil */
+.btn {
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  transition: background-color .15s ease, border-color .15s ease;
+}
+
+.btn-primary {
+  background: var(--gs-primary-700);
+  border-color: var(--gs-primary-700);
+  color: var(--gs-white);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: var(--gs-primary-600);
+  border-color: var(--gs-primary-600);
+  color: var(--gs-white);
+}
+
+/* Conversión: UN SOLO botón rojo por pantalla */
+.btn-conversion {
+  background: var(--gs-red-600);
+  border: 1px solid var(--gs-red-600);
+  color: var(--gs-white);
+}
+.btn-conversion:hover, .btn-conversion:focus {
+  background: var(--gs-red-700);
+  border-color: var(--gs-red-700);
+  color: var(--gs-white);
+}
+
+.btn-outline-gs {
+  background: transparent;
+  border: 1px solid var(--gs-primary-700);
+  color: var(--gs-primary-700);
+}
+.btn-outline-gs:hover { background: var(--gs-primary-50); color: var(--gs-primary-700); }
+
+.btn-outline-danger-gs {
+  background: transparent;
+  border: 1px solid var(--gs-red-600);
+  color: var(--gs-red-600);
+}
+.btn-outline-danger-gs:hover { background: var(--gs-red-50); color: var(--gs-red-700); }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--gs-gray-700);
+  min-height: 36px;
+  padding: 6px 10px;
+}
+.btn-ghost:hover { background: var(--gs-gray-100); color: var(--gs-navy); }
+
+/* Foco de teclado: se estiliza, nunca se elimina */
+.btn:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--gs-primary-400);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.btn:disabled, .btn.disabled { opacity: .55; cursor: not-allowed; }
+
+/* --- Formularios ------------------------------------------- */
+.form-label {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--gs-navy);
+  margin-bottom: var(--sp-1);
+}
+.form-label .req { color: var(--gs-red-600); }
+
+.form-control, .form-select {
+  border: 1px solid var(--gs-gray-300);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  min-height: 44px;
+  font-size: var(--fs-body);
+  color: var(--gs-gray-700);
+}
+.form-control::placeholder { color: var(--gs-gray-400); }
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--gs-primary-500);
+  box-shadow: 0 0 0 3px rgba(0,163,224,.20);
+}
+
+.form-control.is-invalid, .form-select.is-invalid,
+.input-validation-error {
+  border-color: var(--gs-red-600);
+}
+/* El error se comunica en texto, no solo con el borde rojo */
+.invalid-feedback, .field-validation-error {
+  display: block;
+  color: var(--gs-red-700);
+  font-size: var(--fs-sm);
+  margin-top: var(--sp-1);
+}
+.form-text { color: var(--gs-gray-600); font-size: var(--fs-sm); }
+
+/* El resumen de validación solo aparece cuando hay errores.
+   ASP.NET marca el contenedor como -valid mientras no los haya. */
+.validation-summary-valid { display: none; }
+.validation-summary-errors ul { margin: 0; padding-left: 1.1rem; }
+.field-validation-valid { display: none; }
+
+/* --- Tarjetas ---------------------------------------------- */
+.card-gs {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+.card-gs-body { padding: var(--sp-5); }
+
+/* --- Tarjeta de producto -----------------------------------
+   Todas las tarjetas comparten la MISMA estructura y las mismas
+   alturas de cada bloque, con o sin stock. Así la grilla queda
+   alineada sea cual sea el inventario. */
+.producto-card {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.producto-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+/* El placeholder ocupa toda la caja: se lee como "falta la foto",
+   no como una ilustración flotando en el centro. Cuando lleguen las
+   fotos reales de producto, se cambia el src y nada más. */
+.producto-img {
+  background: var(--gs-gray-200);
+  aspect-ratio: 4 / 3;
+  border-bottom: 1px solid var(--gs-gray-200);
+  overflow: hidden;
+}
+.producto-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.producto-body {
+  padding: var(--sp-4);
+  display: flex; flex-direction: column; flex: 1;
+  gap: var(--sp-2);
+}
+
+/* Dos líneas fijas: un nombre largo no descuadra la tarjeta vecina */
+.producto-nombre {
+  font-size: var(--fs-body);
+  margin: 0;
+  min-height: calc(var(--lh-body) * 2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.producto-codigo { font-size: var(--fs-xs); color: var(--gs-gray-600); }
+
+.producto-precio {
+  font-family: var(--gs-font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--gs-navy);
+}
+
+/* Código/precio/disponibilidad a la izquierda, el contador de cantidad
+   al costado (a la derecha) de ese bloque. */
+.producto-info-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.producto-datos { display: flex; flex-direction: column; gap: 2px; }
+
+/* Empuja siempre las acciones al fondo: todas las tarjetas
+   terminan a la misma altura. El botón Agregar ocupa toda la card. */
+.producto-acciones {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+}
+
+.capacidad-badge {
+  display: inline-block;
+  background: var(--gs-primary-50);
+  color: var(--gs-primary-700);
+  border: 1px solid var(--gs-primary-200);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .04em;
+  align-self: flex-start;
+}
+
+/* Stock: SIEMPRE con texto, nunca solo color */
+.stock-ind { font-size: var(--fs-sm); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.stock-ind::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.stock-ok    { color: var(--gs-success); }
+.stock-bajo  { color: #8A6400; }
+.stock-cero  { color: var(--gs-gray-600); }
+
+/* --- Badges de estado --------------------------------------- */
+.badge-estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.badge-estado::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+.estado-pendiente { background: var(--gs-pend-bg);  color: var(--gs-pend-fg);  border-color: var(--gs-pend-bd); }
+.estado-aprobado  { background: var(--gs-aprob-bg); color: var(--gs-aprob-fg); border-color: var(--gs-aprob-bd); }
+.estado-rechazado { background: var(--gs-rech-bg);  color: var(--gs-rech-fg);  border-color: var(--gs-rech-bd); }
+
+/* --- Tablas ------------------------------------------------- */
+.tabla-gs-wrap {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.tabla-gs { width: 100%; margin: 0; }
+.tabla-gs thead th {
+  background: var(--gs-gray-50);
+  color: var(--gs-navy);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--gs-gray-200);
+  white-space: nowrap;
+}
+.tabla-gs tbody td {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--gs-gray-200);
+  vertical-align: middle;
+}
+.tabla-gs tbody tr:last-child td { border-bottom: 0; }
+.tabla-gs tbody tr:hover { background: var(--gs-primary-50); }
+
+.tabla-toolbar {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--gs-gray-200);
+  flex-wrap: wrap;
+}
+.tabla-footer {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  border-top: 1px solid var(--gs-gray-200);
+  flex-wrap: wrap;
+}
+
+.acciones { display: flex; gap: var(--sp-1); justify-content: flex-end; }
+
+/* --- Buscador ----------------------------------------------- */
+.buscador { position: relative; flex: 1 1 260px; max-width: 380px; }
+.buscador .material-symbols-outlined {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  color: var(--gs-gray-400); font-size: 20px; pointer-events: none;
+}
+.buscador .form-control { padding-left: 42px; }
+
+/* --- Paginación --------------------------------------------- */
+.paginacion { display: flex; gap: var(--sp-1); align-items: center; }
+.paginacion .pag {
+  min-width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--gs-gray-300);
+  border-radius: var(--radius-md);
+  background: var(--gs-white);
+  color: var(--gs-gray-700);
+  font-size: var(--fs-sm); font-weight: 600;
+  text-decoration: none; padding: 0 10px;
+}
+.paginacion .pag:hover { background: var(--gs-gray-100); color: var(--gs-navy); }
+.paginacion .pag.activa {
+  background: var(--gs-primary-700);
+  border-color: var(--gs-primary-700);
+  color: var(--gs-white);
+}
+.paginacion .pag.deshabilitada { opacity: .45; pointer-events: none; }
+
+/* --- Estado vacío ------------------------------------------- */
+.estado-vacio { text-align: center; padding: var(--sp-8) var(--sp-4); }
+.estado-vacio .material-symbols-outlined {
+  font-size: 56px; color: var(--gs-gray-400); margin-bottom: var(--sp-3);
+}
+.estado-vacio h3 { color: var(--gs-navy); margin-bottom: var(--sp-2); }
+.estado-vacio p { color: var(--gs-gray-600); margin-bottom: var(--sp-5); }
+
+/* --- Tarjeta KPI -------------------------------------------- */
+.kpi {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--sp-4) var(--sp-5);
+  display: flex; align-items: center; gap: var(--sp-4);
+}
+.kpi-icono {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--gs-primary-50); color: var(--gs-primary-700);
+  display: flex; align-items: center; justify-content: center; flex: 0 0 auto;
+}
+.kpi-label { font-size: var(--fs-sm); color: var(--gs-gray-600); }
+/* La cifra se lee primero; la etiqueta la explica */
+.kpi-valor {
+  font-family: var(--gs-font-heading);
+  font-size: var(--fs-h1); line-height: 1.1; font-weight: 700;
+  color: var(--gs-navy); font-variant-numeric: tabular-nums;
+}
+
+/* --- Alertas ------------------------------------------------ */
+.alerta-gs {
+  border-radius: var(--radius-md);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid;
+  display: flex; align-items: flex-start; gap: var(--sp-3);
+  font-size: var(--fs-sm);
+}
+.alerta-info  { background: var(--gs-primary-50); color: #05506E; border-color: var(--gs-primary-200); }
+.alerta-ok    { background: var(--gs-aprob-bg);   color: var(--gs-aprob-fg); border-color: var(--gs-aprob-bd); }
+.alerta-error { background: var(--gs-red-50);     color: var(--gs-red-700);  border-color: var(--gs-red-500); }
+.alerta-warn  { background: var(--gs-pend-bg);    color: var(--gs-pend-fg);  border-color: var(--gs-pend-bd); }
+
+/* --- Franjas curvas de la portada (patrón de gasco.cl) ------- */
+.wave-top, .wave-bottom {
+  background: var(--gs-primary-500);
+  height: 64px;
+  width: 100%;
+}
+.wave-top    { border-radius: 0 0 50% 50% / 0 0 32px 32px; }
+.wave-bottom { border-radius: 50% 50% 0 0 / 32px 32px 0 0; }
+
+/* --- Toast (aviso de pedido nuevo) -------------------------- */
+.toast-container-gs {
+  position: fixed; top: 84px; right: var(--sp-5);
+  z-index: 1080; display: flex; flex-direction: column; gap: var(--sp-3);
+  max-width: 360px;
+}
+.toast-gs {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-gray-200);
+  border-left: 4px solid var(--gs-primary-500);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--sp-3) var(--sp-4);
+  animation: toast-in .25s ease;
+}
+@keyframes toast-in { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+.toast-gs .titulo { font-weight: 700; color: var(--gs-navy); font-size: var(--fs-sm); }
+.toast-gs .cuerpo { font-size: var(--fs-sm); color: var(--gs-gray-700); }
+
+/* --- Utilidades --------------------------------------------- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  user-select: none;
+}
+.icon-20 { font-size: 20px; }
+.icon-24 { font-size: 24px; }
+
+/* ============================================================
+   Responsive: en móvil las tablas se vuelven tarjetas apiladas.
+   Nunca scroll horizontal.
+   ============================================================ */
+@media (max-width: 575.98px) {
+  .tabla-gs thead { display: none; }
+  .tabla-gs, .tabla-gs tbody, .tabla-gs tr, .tabla-gs td { display: block; width: 100%; }
+  .tabla-gs tr {
+    border: 1px solid var(--gs-gray-200);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--sp-3);
+    padding: var(--sp-2);
+    background: var(--gs-white);
+  }
+  .tabla-gs tbody td {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: var(--sp-2);
+    text-align: right;
+  }
+  /* La cabecera de columna reaparece como etiqueta de cada celda */
+  .tabla-gs tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    color: var(--gs-navy);
+    text-align: left;
+  }
+  .tabla-gs tbody td.sin-label::before { content: none; }
+  .acciones { justify-content: flex-end; }
+  .toast-container-gs { left: var(--sp-3); right: var(--sp-3); max-width: none; }
+}

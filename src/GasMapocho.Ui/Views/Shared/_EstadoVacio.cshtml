@@ -1,0 +1,11 @@
+@model GasMapocho.Ui.Models.EstadoVacioVm
+
+<div class="estado-vacio">
+    <div><span class="material-symbols-outlined" aria-hidden="true">@Model.Icono</span></div>
+    <h3>@Model.Titulo</h3>
+    <p>@Model.Mensaje</p>
+    @if (!string.IsNullOrEmpty(Model.TextoBoton) && !string.IsNullOrEmpty(Model.UrlBoton))
+    {
+        <a class="btn btn-primary" href="@Model.UrlBoton">@Model.TextoBoton</a>
+    }
+</div>

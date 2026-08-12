@@ -1,0 +1,39 @@
+@*
+    Mensajes de confirmación y error tras un POST-Redirect-Get.
+    Se leen desde TempData para que sobrevivan a la redirección.
+*@
+@if (TempData["Ok"] is string ok && !string.IsNullOrEmpty(ok))
+{
+    <div class="alerta-gs alerta-ok mb-4" role="status">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">check_circle</span>
+        <span>@ok</span>
+    </div>
+}
+@if (TempData["Error"] is string error && !string.IsNullOrEmpty(error))
+{
+    <div class="alerta-gs alerta-error mb-4" role="alert">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">error</span>
+        <span>@error</span>
+    </div>
+}
+@if (TempData["Aviso"] is string aviso && !string.IsNullOrEmpty(aviso))
+{
+    <div class="alerta-gs alerta-warn mb-4" role="status">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">warning</span>
+        <span>@aviso</span>
+    </div>
+}
+@*
+    El backend no respondió. Sin este aviso, la pantalla mostraría su estado
+    vacío y el usuario leería "no hay productos" cuando la verdad es otra.
+*@
+@if (ViewData["ApiCaida"] is true)
+{
+    <div class="alerta-gs alerta-error mb-4" role="alert">
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">cloud_off</span>
+        <span>
+            No pudimos conectar con el servicio de datos, así que la información
+            puede estar incompleta. Vuelve a intentarlo en unos momentos.
+        </span>
+    </div>
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "hPIEu3UqQTk=",
+  "success": true,
+  "projectFilePath": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\ClienteGrpc\\ClienteGrpc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jerem\\.nuget\\packages\\google.protobuf\\3.35.1\\google.protobuf.3.35.1.nupkg.sha512",
+    "C:\\Users\\jerem\\.nuget\\packages\\grpc.core.api\\2.83.0\\grpc.core.api.2.83.0.nupkg.sha512",
+    "C:\\Users\\jerem\\.nuget\\packages\\grpc.net.client\\2.83.0\\grpc.net.client.2.83.0.nupkg.sha512",
+    "C:\\Users\\jerem\\.nuget\\packages\\grpc.net.common\\2.83.0\\grpc.net.common.2.83.0.nupkg.sha512",
+    "C:\\Users\\jerem\\.nuget\\packages\\grpc.tools\\2.83.0\\grpc.tools.2.83.0.nupkg.sha512",
+    "C:\\Users\\jerem\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\jerem\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

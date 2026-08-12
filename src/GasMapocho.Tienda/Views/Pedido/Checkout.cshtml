@@ -1,0 +1,164 @@
+@model GasMapocho.Tienda.Controllers.CheckoutVm
+@*
+    Las tres vistas del plan original (datos de entrega → resumen → pago)
+    colapsadas en UNA página por pasos: menos código, menos navegación que
+    romper, y el usuario ve cuánto le falta.
+*@
+
+<div class="pasos" aria-label="Progreso de la compra">
+    <div class="paso hecho"><span class="n" aria-hidden="true">✓</span> Carrito</div>
+    <div class="paso activo" aria-current="step"><span class="n">2</span> Entrega y pago</div>
+    <div class="paso"><span class="n">3</span> Confirmación</div>
+</div>
+
+<h1 class="mb-4">Confirmar pedido</h1>
+
+<form asp-action="Checkout" method="post" novalidate id="form-checkout">
+    @Html.AntiForgeryToken()
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card-gs mb-4">
+                <div class="card-gs-body">
+                    <h2 style="font-size:var(--fs-h3)" class="mb-1">Datos de entrega</h2>
+                    <p class="text-muted-gs mb-4" style="font-size:var(--fs-sm)">
+                        Los campos marcados con <span class="req">*</span> son obligatorios.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="Nombre" class="form-label">
+                                Nombre completo <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Nombre" class="form-control" autocomplete="name" />
+                            <span asp-validation-for="Nombre" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label">
+                                Correo <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Email" class="form-control" type="email" autocomplete="email" />
+                            <span asp-validation-for="Email" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Telefono" class="form-label">
+                                Teléfono <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Telefono" class="form-control" autocomplete="tel"
+                                   placeholder="+56 9 1234 5678" />
+                            <span asp-validation-for="Telefono" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Comuna" class="form-label">
+                                Comuna <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Comuna" class="form-control" />
+                            <span asp-validation-for="Comuna" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-12">
+                            <label asp-for="Direccion" class="form-label">
+                                Dirección <span class="req" aria-hidden="true">*</span>
+                            </label>
+                            <input asp-for="Direccion" class="form-control" autocomplete="street-address" />
+                            <span asp-validation-for="Direccion" class="field-validation-error"></span>
+                        </div>
+
+                        <div class="col-12">
+                            <label asp-for="Referencia" class="form-label">Referencia</label>
+                            <input asp-for="Referencia" class="form-control"
+                                   placeholder="Casa esquina, portón verde…" />
+                            <div class="form-text">Nos ayuda a encontrarte más rápido.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-gs">
+                <div class="card-gs-body">
+                    <h2 style="font-size:var(--fs-h3)" class="mb-3">Método de pago</h2>
+
+                    <div class="row g-3">
+                        @foreach (var m in new[] { ("Efectivo", "payments", "Pagas al recibir el balón"),
+                                                   ("Transferencia", "account_balance", "Te enviamos los datos por correo"),
+                                                   ("Tarjeta", "credit_card", "Pago con tarjeta al recibir"),
+                                                   ("Webpay", "shopping_cart_checkout", "Pago online simulado") })
+                        {
+                            <div class="col-md-3">
+                                <label class="card-gs h-100 d-block p-3" style="cursor:pointer">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <input class="form-check-input mt-1" type="radio"
+                                               asp-for="MetodoPago" value="@m.Item1" />
+                                        <div>
+                                            <span class="material-symbols-outlined icon-24 d-block mb-1"
+                                                  style="color:var(--gs-primary-700)" aria-hidden="true">@m.Item2</span>
+                                            <div class="fw-bold text-navy">@m.Item1</div>
+                                            <div class="text-muted-gs" style="font-size:var(--fs-xs)">@m.Item3</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        }
+                    </div>
+                    <span asp-validation-for="MetodoPago" class="field-validation-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card-gs resumen-carrito">
+                <div class="card-gs-body">
+                    <h2 style="font-size:var(--fs-h3)" class="mb-3">Tu pedido</h2>
+
+                    @foreach (var l in Model.Lineas)
+                    {
+                        <div class="resumen-linea">
+                            <span>@l.Cantidad × @l.Nombre</span>
+                            <span class="num">@l.Subtotal.ToString("C0")</span>
+                        </div>
+                    }
+
+                    <hr class="my-3" />
+
+                    <div class="resumen-linea">
+                        <span>Subtotal</span>
+                        <span class="num">@Model.Subtotal.ToString("C0")</span>
+                    </div>
+                    <div class="resumen-linea">
+                        <span>Despacho</span>
+                        <span class="num">@Model.Despacho.ToString("C0")</span>
+                    </div>
+                    <div class="resumen-total">
+                        <span class="fw-bold text-navy">Total</span>
+                        <span class="valor">@Model.Total.ToString("C0")</span>
+                    </div>
+
+                    @* Único botón de conversión de la pantalla *@
+                    <button type="submit" class="btn btn-conversion w-100 mt-4" id="btn-realizar">
+                        Realizar pedido
+                    </button>
+
+                    <a href="/Carrito" class="btn btn-outline-gs w-100 mt-2">Volver al carrito</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/_content/GasMapocho.Ui/js/formato.js"></script>
+    <script>
+        // Evita el doble envío por doble clic impaciente.
+        // Es un problema DISTINTO del que resuelve el POST-Redirect-Get
+        // (que evita la duplicación al recargar la confirmación).
+        $('#form-checkout').on('submit', function () {
+            if ($(this).valid()) {
+                $('#btn-realizar').prop('disabled', true).text('Registrando…');
+            }
+        });
+    </script>
+}

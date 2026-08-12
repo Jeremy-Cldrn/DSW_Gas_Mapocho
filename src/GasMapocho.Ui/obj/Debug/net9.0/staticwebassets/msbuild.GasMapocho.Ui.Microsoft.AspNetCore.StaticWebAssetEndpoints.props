@@ -1,0 +1,76 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/componentes.2555qo8bhy.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\componentes.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2555qo8bhy"},{"Name":"integrity","Value":"sha256-RqP7C8uVOE02T7Xw9KDrqjRcMQ2VQaKbZZlYPhWl5GQ="},{"Name":"label","Value":"_content/GasMapocho.Ui/css/componentes.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15099"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RqP7C8uVOE02T7Xw9KDrqjRcMQ2VQaKbZZlYPhWl5GQ=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Aug 2026 08:57:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/componentes.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\componentes.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RqP7C8uVOE02T7Xw9KDrqjRcMQ2VQaKbZZlYPhWl5GQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"15099"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RqP7C8uVOE02T7Xw9KDrqjRcMQ2VQaKbZZlYPhWl5GQ=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Aug 2026 08:57:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/tokens.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tokens.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gFx\u002Bd6bIasfoCRecKPWX5wsat4ZPVmQgcj3Fkz87HMM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3622"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gFx\u002Bd6bIasfoCRecKPWX5wsat4ZPVmQgcj3Fkz87HMM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 23:51:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/tokens.gcs0kgsmn4.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tokens.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gcs0kgsmn4"},{"Name":"integrity","Value":"sha256-gFx\u002Bd6bIasfoCRecKPWX5wsat4ZPVmQgcj3Fkz87HMM="},{"Name":"label","Value":"_content/GasMapocho.Ui/css/tokens.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3622"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gFx\u002Bd6bIasfoCRecKPWX5wsat4ZPVmQgcj3Fkz87HMM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 23:51:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/img/logoGasco2024.iptyly9oil.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\logoGasco2024.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iptyly9oil"},{"Name":"integrity","Value":"sha256-5lew5/UeDjlVm5JtncN2idqqtyjh\u002Bk\u002BLR2I/Wc5Tcx8="},{"Name":"label","Value":"_content/GasMapocho.Ui/img/logoGasco2024.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"21884"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00225lew5/UeDjlVm5JtncN2idqqtyjh\u002Bk\u002BLR2I/Wc5Tcx8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 23:18:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/img/logoGasco2024.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\logoGasco2024.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5lew5/UeDjlVm5JtncN2idqqtyjh\u002Bk\u002BLR2I/Wc5Tcx8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"21884"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00225lew5/UeDjlVm5JtncN2idqqtyjh\u002Bk\u002BLR2I/Wc5Tcx8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 23:18:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/img/producto-placeholder.svg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\producto-placeholder.svg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iq\u002BYVxh/Ch6eHy7kvWJ9FBXYPOtoNqE1CLHyJVkKs5U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"473"},{"Name":"Content-Type","Value":"image/svg\u002Bxml"},{"Name":"ETag","Value":"\u0022iq\u002BYVxh/Ch6eHy7kvWJ9FBXYPOtoNqE1CLHyJVkKs5U=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Aug 2026 00:31:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/img/producto-placeholder.umg1qbq1h4.svg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\producto-placeholder.svg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"umg1qbq1h4"},{"Name":"integrity","Value":"sha256-iq\u002BYVxh/Ch6eHy7kvWJ9FBXYPOtoNqE1CLHyJVkKs5U="},{"Name":"label","Value":"_content/GasMapocho.Ui/img/producto-placeholder.svg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"473"},{"Name":"Content-Type","Value":"image/svg\u002Bxml"},{"Name":"ETag","Value":"\u0022iq\u002BYVxh/Ch6eHy7kvWJ9FBXYPOtoNqE1CLHyJVkKs5U=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Aug 2026 00:31:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/js/formato.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\formato.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CogddrxyXshFAO3QfgBDTxUBh8ZfVgIDNa/VGCl0phU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1671"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022CogddrxyXshFAO3QfgBDTxUBh8ZfVgIDNa/VGCl0phU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 23:52:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/js/formato.m5gpeb1mbv.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\formato.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m5gpeb1mbv"},{"Name":"integrity","Value":"sha256-CogddrxyXshFAO3QfgBDTxUBh8ZfVgIDNa/VGCl0phU="},{"Name":"label","Value":"_content/GasMapocho.Ui/js/formato.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1671"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022CogddrxyXshFAO3QfgBDTxUBh8ZfVgIDNa/VGCl0phU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 23:52:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/js/tabla.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\tabla.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-E0HSucSuaHYCcSKyx1UirH7ay5UI4Gw0zB/Dfzf6FZM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4647"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022E0HSucSuaHYCcSKyx1UirH7ay5UI4Gw0zB/Dfzf6FZM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Aug 2026 07:50:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/js/tabla.zoh6ik0e4g.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\tabla.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zoh6ik0e4g"},{"Name":"integrity","Value":"sha256-E0HSucSuaHYCcSKyx1UirH7ay5UI4Gw0zB/Dfzf6FZM="},{"Name":"label","Value":"_content/GasMapocho.Ui/js/tabla.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4647"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022E0HSucSuaHYCcSKyx1UirH7ay5UI4Gw0zB/Dfzf6FZM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Aug 2026 07:50:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

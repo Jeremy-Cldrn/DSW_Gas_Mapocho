@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — Panel Gas Mapocho</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="~/_content/GasMapocho.Ui/css/tokens.css" />
+    <link rel="stylesheet" href="~/_content/GasMapocho.Ui/css/componentes.css" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+
+    <style>
+        /* Propio de la pantalla de acceso del panel */
+        .pantalla-auth { min-height: 100vh; display: flex; flex-direction: column; background: var(--gs-white); }
+        .auth-main { flex: 1; display: flex; align-items: center; padding: var(--sp-7) 0; }
+        .login-card {
+            background: var(--gs-white); border: 1px solid var(--gs-gray-200);
+            border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+            padding: var(--sp-6); max-width: 420px; margin: 0 auto;
+        }
+        .login-marca { text-align: center; margin-bottom: var(--sp-5); }
+    </style>
+</head>
+<body class="pantalla-auth">
+    <div class="wave-top" aria-hidden="true"></div>
+
+    <main class="auth-main">
+        <div class="container">
+            @* Solo se ve tras cerrar sesión: Login() nunca deja un mensaje en
+               TempData, así que esto no aparece después de un ingreso exitoso. *@
+            <partial name="_MensajesAlerta" />
+            @RenderBody()
+        </div>
+    </main>
+
+    <div class="wave-bottom" aria-hidden="true"></div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/_content/GasMapocho.Ui/js/formato.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

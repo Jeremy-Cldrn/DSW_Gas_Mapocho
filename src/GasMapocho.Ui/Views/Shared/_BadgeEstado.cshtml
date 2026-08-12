@@ -1,0 +1,15 @@
+@model string
+@*
+    Estado del pedido. Lleva SIEMPRE texto además del color: quien no distingue
+    rojo de verde debe poder leer en qué estado está su pedido.
+    Los tres pares de color están verificados a ≥6:1 de contraste.
+*@
+@{
+    var clase = Model switch
+    {
+        "Aprobado"  => "estado-aprobado",
+        "Rechazado" => "estado-rechazado",
+        _           => "estado-pendiente"
+    };
+}
+<span class="badge-estado @clase">@Model</span>
