@@ -169,6 +169,8 @@ public class PedidoRepositorio : IPedidoRepositorio
                     IdDetalle      = lector.GetInt32(lector.GetOrdinal("IdDetalle")),
                     IdProducto     = lector.GetInt32(lector.GetOrdinal("IdProducto")),
                     Producto       = lector.GetString(lector.GetOrdinal("Producto")),
+                    ImagenUrl      = lector.IsDBNull(lector.GetOrdinal("ImagenUrl"))
+                                        ? null : lector.GetString(lector.GetOrdinal("ImagenUrl")),
                     CapacidadKg    = lector.GetInt32(lector.GetOrdinal("CapacidadKg")),
                     Cantidad       = lector.GetInt32(lector.GetOrdinal("Cantidad")),
                     PrecioUnitario = lector.GetDecimal(lector.GetOrdinal("PrecioUnitario")),

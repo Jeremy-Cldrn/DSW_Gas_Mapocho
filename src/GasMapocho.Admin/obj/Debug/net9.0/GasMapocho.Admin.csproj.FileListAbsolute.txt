@@ -196,5 +196,6 @@ C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\GasMapocho.Admin.pdb
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\GasMapocho.Admin.genruntimeconfig.cache
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\ref\GasMapocho.Admin.dll
-C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\compressed\n9kv5ohx7a-pyjhr8uh9l.gz
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\compressed\w4e6nexoeb-hil2mjwdt4.gz
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\GasMapocho.Admin.sourcelink.json
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Admin\obj\Debug\net9.0\compressed\n9kv5ohx7a-pyjhr8uh9l.gz

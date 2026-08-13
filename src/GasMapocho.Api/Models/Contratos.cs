@@ -46,6 +46,7 @@ public class LineaPedido
     public int IdDetalle { get; set; }
     public int IdProducto { get; set; }
     public string Producto { get; set; } = "";
+    public string? ImagenUrl { get; set; }
     public int CapacidadKg { get; set; }
 
     [Range(1, 999, ErrorMessage = "La cantidad debe ser mayor que cero.")]

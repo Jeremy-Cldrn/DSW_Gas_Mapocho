@@ -12,12 +12,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2555qo8bhy</Fingerprint>
-      <Integrity>RqP7C8uVOE02T7Xw9KDrqjRcMQ2VQaKbZZlYPhWl5GQ=</Integrity>
+      <Fingerprint>id0fwlsy8w</Fingerprint>
+      <Integrity>poOAxpp3unZ7cQmcbCXMhsQWrAESlJjALPayZEoqzgE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>15099</FileLength>
-      <LastWriteTime>Wed, 12 Aug 2026 08:57:27 GMT</LastWriteTime>
+      <FileLength>15261</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 03:43:37 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\componentes.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tokens.css'))">
@@ -72,13 +72,153 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>umg1qbq1h4</Fingerprint>
-      <Integrity>iq+YVxh/Ch6eHy7kvWJ9FBXYPOtoNqE1CLHyJVkKs5U=</Integrity>
+      <Fingerprint>tyswwhqe0w</Fingerprint>
+      <Integrity>pX5vA4+Mp8M48ObvF0hz4R6RxFVHH9NMaFIJjSyFh/4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>473</FileLength>
-      <LastWriteTime>Fri, 07 Aug 2026 00:31:37 GMT</LastWriteTime>
+      <FileLength>386</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 03:27:22 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\producto-placeholder.svg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-11kg.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/balon-11kg.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ggb8io2473</Fingerprint>
+      <Integrity>AELzCWnIL0Ojrvf3oAxwSsc6WR8LmoQ8H7pi+9V9qJ4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>118298</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 01:23:20 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-11kg.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-15kg.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/balon-15kg.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ermiquanu7</Fingerprint>
+      <Integrity>ujUP4WIH7e02VIDekuvyb97/6SiT9jHPedpivrmJqkI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>150624</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 01:22:52 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-15kg.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-45kg.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/balon-45kg.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n3bbyio9q5</Fingerprint>
+      <Integrity>DUlZqfo3OsW1OzThpDLWyjGaREQptEBxQtRHiKR7dMM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>198621</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 01:22:28 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-45kg.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-5kg.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/balon-5kg.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p4ibb6iw23</Fingerprint>
+      <Integrity>d+y4tJBsu96NYbl/d6uW/eNgTwX11XuAPZXWsVwSX4w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>102412</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 01:23:45 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-5kg.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-gh-15.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/balon-gh-15.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jqx8o5p4gs</Fingerprint>
+      <Integrity>Ncdrj9n2JByT4fw8+RFArqEPwa0JifzZrvIykzJnPsY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>434140</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 01:22:03 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\balon-gh-15.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\kit-instalacion.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/kit-instalacion.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4duulwzrha</Fingerprint>
+      <Integrity>OJrNyx3OVpVxif3LKOL765hwIEJl6lyaoygOtuF3wXI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1311955</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 02:36:47 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\kit-instalacion.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\manguera.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GasMapocho.Ui</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GasMapocho.Ui</BasePath>
+      <RelativePath>img/productos/manguera.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>770l4otz6j</Fingerprint>
+      <Integrity>Q2guqzF6f8Fk+Y03lclqK5P+RXA4UcAp7fy2EHf8b3E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>659315</FileLength>
+      <LastWriteTime>Thu, 13 Aug 2026 02:37:26 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\productos\manguera.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\formato.js'))">
       <SourceType>Package</SourceType>

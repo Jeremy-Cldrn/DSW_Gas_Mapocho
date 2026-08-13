@@ -17,6 +17,34 @@
       "PackagePath": "staticwebassets\\img\\producto-placeholder.svg"
     },
     {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-11kg.png",
+      "PackagePath": "staticwebassets\\img\\productos\\balon-11kg.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-15kg.png",
+      "PackagePath": "staticwebassets\\img\\productos\\balon-15kg.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-45kg.png",
+      "PackagePath": "staticwebassets\\img\\productos\\balon-45kg.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-5kg.png",
+      "PackagePath": "staticwebassets\\img\\productos\\balon-5kg.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-gh-15.png",
+      "PackagePath": "staticwebassets\\img\\productos\\balon-gh-15.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\kit-instalacion.png",
+      "PackagePath": "staticwebassets\\img\\productos\\kit-instalacion.png"
+    },
+    {
+      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\manguera.png",
+      "PackagePath": "staticwebassets\\img\\productos\\manguera.png"
+    },
+    {
       "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\js\\formato.js",
       "PackagePath": "staticwebassets\\js\\formato.js"
     },

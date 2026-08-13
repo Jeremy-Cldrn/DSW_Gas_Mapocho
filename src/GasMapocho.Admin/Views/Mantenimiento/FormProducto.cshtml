@@ -79,6 +79,19 @@
                    válido para accesorios y balones por igual desde que se mide todo
                    por Código/Nombre. *@
                 <input type="hidden" asp-for="CapacidadKg" value="0" />
+
+                <div class="col-12">
+                    <label asp-for="ImagenUrl" class="form-label">Imagen</label>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="@Model.ImagenSrc" alt="" class="thumb thumb-sm" style="border-radius:8px" />
+                        <input asp-for="ImagenUrl" class="form-control" placeholder="productos/balon-5kg.png" />
+                    </div>
+                    <span asp-validation-for="ImagenUrl" class="field-validation-error"></span>
+                    <p class="text-muted-gs mt-1 mb-0" style="font-size:var(--fs-xs)">
+                        Ruta relativa dentro de wwwroot/img del proyecto GasMapocho.Ui. Déjalo en
+                        blanco para usar la imagen genérica.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

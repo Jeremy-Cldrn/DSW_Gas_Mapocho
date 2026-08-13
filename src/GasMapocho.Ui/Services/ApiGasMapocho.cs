@@ -135,6 +135,7 @@ public class ApiGasMapocho
         codigo = vm.Codigo,
         nombre = vm.Nombre,
         descripcion = (string?)null,
+        imagenUrl = string.IsNullOrWhiteSpace(vm.ImagenUrl) ? null : vm.ImagenUrl.Trim(),
         capacidadKg = vm.CapacidadKg,
         precio = vm.Precio,
         stock = vm.Stock,
@@ -368,6 +369,7 @@ public class ApiGasMapocho
         Id = p.IdProducto,
         Codigo = p.Codigo,
         Nombre = p.Nombre,
+        ImagenUrl = p.ImagenUrl,
         CapacidadKg = p.CapacidadKg,
         Precio = p.Precio,
         Stock = p.Stock,
@@ -410,6 +412,7 @@ public class ApiGasMapocho
             {
                 IdProducto = d.IdProducto,
                 Nombre = d.Producto,
+                ImagenUrl = d.ImagenUrl,
                 CapacidadKg = d.CapacidadKg,
                 Cantidad = d.Cantidad,
                 PrecioUnitario = d.PrecioUnitario
@@ -428,6 +431,7 @@ public class ApiGasMapocho
         public int IdProducto { get; set; }
         public string Codigo { get; set; } = "";
         public string Nombre { get; set; } = "";
+        public string? ImagenUrl { get; set; }
         public int CapacidadKg { get; set; }
         public decimal Precio { get; set; }
         public int Stock { get; set; }
@@ -476,6 +480,7 @@ public class ApiGasMapocho
     {
         public int IdProducto { get; set; }
         public string Producto { get; set; } = "";
+        public string? ImagenUrl { get; set; }
         public int CapacidadKg { get; set; }
         public int Cantidad { get; set; }
         public decimal PrecioUnitario { get; set; }

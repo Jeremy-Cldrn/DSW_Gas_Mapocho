@@ -12,10 +12,9 @@ else
         @foreach (var p in Model)
         {
             <article class="producto-card">
-                @* Placeholder hasta que existan las fotos reales de producto *@
+                @* Sin foto propia (accesorios), la imagen cae al placeholder — @p.ImagenSrc lo resuelve. *@
                 <div class="producto-img">
-                    <img src="~/_content/GasMapocho.Ui/img/producto-placeholder.svg"
-                         alt="@p.Nombre" loading="lazy" />
+                    <img src="@p.ImagenSrc" alt="@p.Nombre" loading="lazy" />
                 </div>
 
                 <div class="producto-body">

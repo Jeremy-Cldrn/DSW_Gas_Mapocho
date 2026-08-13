@@ -173,16 +173,19 @@ a:focus-visible {
 }
 .producto-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
-/* El placeholder ocupa toda la caja: se lee como "falta la foto",
-   no como una ilustración flotando en el centro. Cuando lleguen las
-   fotos reales de producto, se cambia el src y nada más. */
+/* object-fit: contain (no cover): la foto de producto entra completa, con
+   aire alrededor, en vez de recortada/ampliada a sangre. El padding evita
+   que toque los bordes de la caja; el mismo tratamiento sirve para el
+   ícono placeholder de los productos sin foto propia. */
 .producto-img {
-  background: var(--gs-gray-200);
+  background: var(--gs-gray-50);
   aspect-ratio: 4 / 3;
   border-bottom: 1px solid var(--gs-gray-200);
   overflow: hidden;
+  padding: var(--sp-4);
+  box-sizing: border-box;
 }
-.producto-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.producto-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .producto-body {
   padding: var(--sp-4);
@@ -416,6 +419,7 @@ a:focus-visible {
   vertical-align: middle;
   user-select: none;
 }
+.icon-16 { font-size: 16px; }
 .icon-20 { font-size: 20px; }
 .icon-24 { font-size: 24px; }
 

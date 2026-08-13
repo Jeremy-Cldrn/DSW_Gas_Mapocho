@@ -59,6 +59,7 @@ public static class Carrito
             {
                 IdProducto = producto.Id,
                 Nombre = producto.Nombre,
+                ImagenUrl = producto.ImagenUrl,
                 CapacidadKg = producto.CapacidadKg,
                 Cantidad = cantidad,
                 PrecioUnitario = producto.Precio

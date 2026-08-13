@@ -42,3 +42,4 @@ C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.pdb
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.genruntimeconfig.cache
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ref\ClienteGrpc.dll
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.sourcelink.json

@@ -17,6 +17,10 @@ public class Producto
     [StringLength(300)]
     public string? Descripcion { get; set; }
 
+    /// <summary>Ruta relativa dentro de wwwroot/img de GasMapocho.Ui, p.ej. "productos/balon-5kg.png".</summary>
+    [StringLength(200)]
+    public string? ImagenUrl { get; set; }
+
     [Range(0, 100)]
     public int CapacidadKg { get; set; }
 

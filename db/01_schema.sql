@@ -72,6 +72,9 @@ CREATE TABLE dbo.Producto (
     Codigo      NVARCHAR(20)  NOT NULL,
     Nombre      NVARCHAR(120) NOT NULL,
     Descripcion NVARCHAR(300) NULL,
+    -- Ruta relativa dentro de wwwroot/img de GasMapocho.Ui, p.ej. 'productos/balon-5kg.png'.
+    -- NULL para los productos sin foto real: la vista cae al placeholder.
+    ImagenUrl   NVARCHAR(200) NULL,
     CapacidadKg INT           NOT NULL,
     -- DECIMAL(12,0): el peso chileno no tiene decimales. Nunca FLOAT ni MONEY.
     Precio      DECIMAL(12,0) NOT NULL,

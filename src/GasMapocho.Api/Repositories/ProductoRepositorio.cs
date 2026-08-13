@@ -70,6 +70,8 @@ public class ProductoRepositorio : IProductoRepositorio
         comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 120).Value = producto.Nombre;
         comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 300).Value =
             (object?)producto.Descripcion ?? DBNull.Value;
+        comando.Parameters.Add("@ImagenUrl", SqlDbType.NVarChar, 200).Value =
+            (object?)producto.ImagenUrl ?? DBNull.Value;
         comando.Parameters.Add("@CapacidadKg", SqlDbType.Int).Value = producto.CapacidadKg;
         comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = producto.Precio;
         comando.Parameters.Add("@Stock", SqlDbType.Int).Value = producto.Stock;
@@ -96,6 +98,8 @@ public class ProductoRepositorio : IProductoRepositorio
         comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 120).Value = producto.Nombre;
         comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 300).Value =
             (object?)producto.Descripcion ?? DBNull.Value;
+        comando.Parameters.Add("@ImagenUrl", SqlDbType.NVarChar, 200).Value =
+            (object?)producto.ImagenUrl ?? DBNull.Value;
         comando.Parameters.Add("@CapacidadKg", SqlDbType.Int).Value = producto.CapacidadKg;
         comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = producto.Precio;
         comando.Parameters.Add("@Stock", SqlDbType.Int).Value = producto.Stock;
@@ -125,6 +129,8 @@ public class ProductoRepositorio : IProductoRepositorio
         Nombre      = lector.GetString(lector.GetOrdinal("Nombre")),
         Descripcion = lector.IsDBNull(lector.GetOrdinal("Descripcion"))
                         ? null : lector.GetString(lector.GetOrdinal("Descripcion")),
+        ImagenUrl   = lector.IsDBNull(lector.GetOrdinal("ImagenUrl"))
+                        ? null : lector.GetString(lector.GetOrdinal("ImagenUrl")),
         CapacidadKg = lector.GetInt32(lector.GetOrdinal("CapacidadKg")),
         Precio      = lector.GetDecimal(lector.GetOrdinal("Precio")),
         Stock       = lector.GetInt32(lector.GetOrdinal("Stock")),

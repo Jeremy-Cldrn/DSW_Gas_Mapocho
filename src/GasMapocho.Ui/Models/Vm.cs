@@ -8,6 +8,23 @@ namespace GasMapocho.Ui.Models;
 // GasMapocho.Contracts. Las vistas no cambian.
 // ============================================================
 
+/// <summary>
+/// Resuelve la foto de un producto a partir de su ImagenUrl (ruta relativa
+/// dentro de wwwroot/img de la RCL GasMapocho.Ui). Sin foto propia, cae al
+/// mismo placeholder que usaban las vistas antes de que existieran las fotos
+/// reales — así el catálogo, el carrito y el historial de compras usan
+/// siempre el mismo criterio.
+/// </summary>
+public static class Imagenes
+{
+    private const string Placeholder = "/_content/GasMapocho.Ui/img/producto-placeholder.svg";
+
+    public static string Resolver(string? imagenUrl) =>
+        string.IsNullOrWhiteSpace(imagenUrl)
+            ? Placeholder
+            : $"/_content/GasMapocho.Ui/img/{imagenUrl}";
+}
+
 public class ProductoVm
 {
     public int Id { get; set; }
@@ -20,6 +37,13 @@ public class ProductoVm
     [Required(ErrorMessage = "Ingresa el nombre.")]
     [StringLength(120, ErrorMessage = "El nombre no puede superar los 120 caracteres.")]
     public string Nombre { get; set; } = "";
+
+    /// <summary>Ruta relativa dentro de wwwroot/img, p.ej. "productos/balon-5kg.png". Vacía = sin foto propia.</summary>
+    [StringLength(200, ErrorMessage = "La ruta de la imagen no puede superar los 200 caracteres.")]
+    [Display(Name = "Imagen")]
+    public string? ImagenUrl { get; set; }
+
+    public string ImagenSrc => Imagenes.Resolver(ImagenUrl);
 
     // Desde 0: el catálogo incluye accesorios (regulador, manguera, kit) que
     // no tienen capacidad en kilos. Con mínimo 1 no se podían editar.
@@ -51,10 +75,13 @@ public class LineaVm
 {
     public int IdProducto { get; set; }
     public string Nombre { get; set; } = "";
+    public string? ImagenUrl { get; set; }
     public int CapacidadKg { get; set; }
     public int Cantidad { get; set; }
     public decimal PrecioUnitario { get; set; }
     public decimal Subtotal => Cantidad * PrecioUnitario;
+
+    public string ImagenSrc => Imagenes.Resolver(ImagenUrl);
 }
 
 public class PedidoVm

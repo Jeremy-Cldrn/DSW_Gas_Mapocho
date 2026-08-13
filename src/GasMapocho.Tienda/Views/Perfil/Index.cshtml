@@ -1,34 +1,53 @@
 @model ClienteVm
 @*
     Solo informativa: el encargo pide expresamente que no se pueda editar
-    nada desde acá (§15.1).
+    nada desde acá (§15.1). La cabecera con iniciales + nombre reemplaza la
+    fila "Nombre" de la lista: ya quedó dicho arriba, repetirlo abajo era
+    puro ruido.
 *@
+@{
+    var partes = Model.Nombre.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    var iniciales = partes.Length > 0 ? partes[0][0].ToString() : "";
+    if (partes.Length > 1) iniciales += partes[^1][0];
+    iniciales = iniciales.ToUpperInvariant();
+
+    var campos = new (string Icono, string Etiqueta, string Valor)[]
+    {
+        ("badge",         "RUT",       Model.Documento),
+        ("mail",          "Correo",    Model.Email),
+        ("call",          "Teléfono",  Model.Telefono),
+        ("location_city", "Comuna",    Model.Comuna),
+        ("home_pin",      "Dirección", Model.Direccion),
+    };
+}
 
 <div class="mb-4">
     <h1 class="mb-1">Mi perfil</h1>
     <p class="text-muted-gs mb-0">Estos son los datos que tenemos registrados.</p>
 </div>
 
-<div class="card-gs mx-auto" style="max-width:560px">
-    <div class="card-gs-body">
-        <dl class="row mb-0">
-            <dt class="col-5 col-sm-4 text-muted-gs fw-normal">Nombre</dt>
-            <dd class="col-7 col-sm-8 fw-bold text-navy">@Model.Nombre</dd>
-
-            <dt class="col-5 col-sm-4 text-muted-gs fw-normal">RUT</dt>
-            <dd class="col-7 col-sm-8">@Model.Documento</dd>
-
-            <dt class="col-5 col-sm-4 text-muted-gs fw-normal">Correo</dt>
-            <dd class="col-7 col-sm-8">@Model.Email</dd>
-
-            <dt class="col-5 col-sm-4 text-muted-gs fw-normal">Teléfono</dt>
-            <dd class="col-7 col-sm-8">@Model.Telefono</dd>
-
-            <dt class="col-5 col-sm-4 text-muted-gs fw-normal">Comuna</dt>
-            <dd class="col-7 col-sm-8">@Model.Comuna</dd>
-
-            <dt class="col-5 col-sm-4 text-muted-gs fw-normal mb-0">Dirección</dt>
-            <dd class="col-7 col-sm-8 mb-0">@Model.Direccion</dd>
-        </dl>
+<div class="card-gs perfil-card mx-auto" style="max-width:560px">
+    <div class="perfil-cabecera">
+        <div class="perfil-avatar" aria-hidden="true">@iniciales</div>
+        <div>
+            <h2 class="perfil-nombre">@Model.Nombre</h2>
+            <span class="perfil-badge">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">lock</span>
+                Solo lectura
+            </span>
+        </div>
     </div>
+
+    <dl class="perfil-datos mb-0">
+        @foreach (var c in campos)
+        {
+            <div class="perfil-fila">
+                <span class="material-symbols-outlined icon-20 perfil-icono" aria-hidden="true">@c.Icono</span>
+                <div>
+                    <dt class="perfil-etiqueta">@c.Etiqueta</dt>
+                    <dd class="perfil-valor mb-0">@c.Valor</dd>
+                </div>
+            </div>
+        }
+    </dl>
 </div>

@@ -78,24 +78,10 @@
                     tiempo real. Se retiró porque este panel no tiene SignalR y el
                     aviso de pedido nuevo no está implementado. Un indicador siempre
                     en verde, sin nada detrás, afirma algo falso.
-                *@
 
-                <div class="dropdown ms-auto">
-                    <button class="btn btn-ghost dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="material-symbols-outlined icon-24" aria-hidden="true">account_circle</span>
-                        <span class="d-none d-sm-inline">@Context.Session.NombreUsuario()</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            @* Por POST: un cierre de sesión por GET lo dispara cualquier
-                               recurso remoto que apunte a esa URL. *@
-                            <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
-                                @Html.AntiForgeryToken()
-                                <button type="submit" class="dropdown-item">Cerrar sesión</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
+                    El logout vive solo en el sidebar (sidebar-pie): tenerlo repetido
+                    acá arriba era duplicar la misma acción dos veces en la pantalla.
+                *@
             </header>
 
             <main id="contenido" class="admin-contenido">

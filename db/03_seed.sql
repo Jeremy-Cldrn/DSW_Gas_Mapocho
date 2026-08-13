@@ -90,17 +90,17 @@ GO
    dos estados en el listado.
    ------------------------------------------------------------ */
 SET IDENTITY_INSERT dbo.Producto ON;
-INSERT INTO dbo.Producto (IdProducto, Codigo, Nombre, Descripcion, CapacidadKg, Precio, Stock, Activo) VALUES
- (1, N'BAL-05', N'Balón de gas 5 kg',    N'Balón de gas licuado de 5 kg, ideal para uso domiciliario reducido.',  5, 14500, 24, 1),
- (2, N'BAL-11', N'Balón de gas 11 kg',   N'Balón de gas licuado de 11 kg, el formato más usado en los hogares.', 11, 21000, 18, 1),
- (3, N'BAL-15', N'Balón de gas 15 kg',   N'Balón de gas licuado de 15 kg para alto consumo.',                    15, 28900, 12, 1),
+INSERT INTO dbo.Producto (IdProducto, Codigo, Nombre, Descripcion, ImagenUrl, CapacidadKg, Precio, Stock, Activo) VALUES
+ (1, N'BAL-05', N'Balón de gas 5 kg',    N'Balón de gas licuado de 5 kg, ideal para uso domiciliario reducido.',  N'productos/balon-5kg.png',    5, 14500, 24, 1),
+ (2, N'BAL-11', N'Balón de gas 11 kg',   N'Balón de gas licuado de 11 kg, el formato más usado en los hogares.', N'productos/balon-11kg.png',  11, 21000, 18, 1),
+ (3, N'BAL-15', N'Balón de gas 15 kg',   N'Balón de gas licuado de 15 kg para alto consumo.',                    N'productos/balon-15kg.png',  15, 28900, 12, 1),
  -- REG-01 queda desactivado (baja lógica): el encargo pide sacarlo del
  -- catálogo cliente, pero sigue siendo un producto real para el panel admin.
- (4, N'REG-01', N'Regulador de presión', N'Regulador con manómetro, compatible con todos los formatos.',          0,  8900,  3, 0),
- (5, N'MAN-15', N'Manguera 1,5 m',       N'Manguera certificada de 1,5 metros con abrazaderas.',                  0,  4500,  0, 1),
- (6, N'KIT-01', N'Kit de instalación',   N'Regulador, manguera y abrazaderas en un solo kit.',                    0, 12900, 15, 1),
- (7, N'BAL-45', N'Balón de Gas 45 kg',   N'Balón de gas licuado de 45 kg, para uso industrial o alto consumo.',  45, 29900, 10, 1),
- (8, N'GH-15',  N'Balón de Gas GH-15',   N'Balón de gas licuado formato GH-15.',                                 15, 84950,  8, 1);
+ (4, N'REG-01', N'Regulador de presión', N'Regulador con manómetro, compatible con todos los formatos.',          NULL,                          0,  8900,  3, 0),
+ (5, N'MAN-15', N'Manguera 1,5 m',       N'Manguera certificada de 1,5 metros con abrazaderas.',                  N'productos/manguera.png',     0,  4500,  0, 1),
+ (6, N'KIT-01', N'Kit de instalación',   N'Regulador, manguera y abrazaderas en un solo kit.',                    N'productos/kit-instalacion.png', 0, 12900, 15, 1),
+ (7, N'BAL-45', N'Balón de Gas 45 kg',   N'Balón de gas licuado de 45 kg, para uso industrial o alto consumo.',  N'productos/balon-45kg.png',  45, 29900, 10, 1),
+ (8, N'GH-15',  N'Balón de Gas GH-15',   N'Balón de gas licuado formato GH-15.',                                 N'productos/balon-gh-15.png', 15, 84950,  8, 1);
 SET IDENTITY_INSERT dbo.Producto OFF;
 GO
 

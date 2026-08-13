@@ -199,4 +199,5 @@ C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Tienda\obj\Debug\net9.0\GasMapocho.Tienda.pdb
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Tienda\obj\Debug\net9.0\GasMapocho.Tienda.genruntimeconfig.cache
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Tienda\obj\Debug\net9.0\ref\GasMapocho.Tienda.dll
-C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\mjxcnuzyfa-z3iepaa4h5.gz
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Tienda\obj\Debug\net9.0\GasMapocho.Tienda.sourcelink.json
+C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\mjxcnuzyfa-8dwegnmc4p.gz

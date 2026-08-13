@@ -138,7 +138,7 @@ BEGIN
     WHERE (@IncluirInactivos = 1 OR Activo = 1)
       AND (@Busqueda IS NULL OR Nombre LIKE '%' + @Busqueda + '%' OR Codigo LIKE '%' + @Busqueda + '%');
 
-    SELECT IdProducto, Codigo, Nombre, Descripcion, CapacidadKg, Precio, Stock, Activo
+    SELECT IdProducto, Codigo, Nombre, Descripcion, ImagenUrl, CapacidadKg, Precio, Stock, Activo
     FROM dbo.Producto
     WHERE (@IncluirInactivos = 1 OR Activo = 1)
       AND (@Busqueda IS NULL OR Nombre LIKE '%' + @Busqueda + '%' OR Codigo LIKE '%' + @Busqueda + '%')
@@ -156,7 +156,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT IdProducto, Codigo, Nombre, Descripcion, CapacidadKg, Precio, Stock, Activo
+    SELECT IdProducto, Codigo, Nombre, Descripcion, ImagenUrl, CapacidadKg, Precio, Stock, Activo
     FROM dbo.Producto
     WHERE IdProducto = @IdProducto;
 END
@@ -168,6 +168,7 @@ CREATE PROCEDURE dbo.sp_Producto_Registrar
     @Codigo      NVARCHAR(20),
     @Nombre      NVARCHAR(120),
     @Descripcion NVARCHAR(300) = NULL,
+    @ImagenUrl   NVARCHAR(200) = NULL,
     @CapacidadKg INT,
     @Precio      DECIMAL(12,0),
     @Stock       INT,
@@ -179,8 +180,8 @@ BEGIN
     IF EXISTS (SELECT 1 FROM dbo.Producto WHERE Codigo = @Codigo)
         THROW 50040, 'Ya existe un producto con ese codigo.', 1;
 
-    INSERT INTO dbo.Producto (Codigo, Nombre, Descripcion, CapacidadKg, Precio, Stock, Activo)
-    VALUES (@Codigo, @Nombre, @Descripcion, @CapacidadKg, @Precio, @Stock, 1);
+    INSERT INTO dbo.Producto (Codigo, Nombre, Descripcion, ImagenUrl, CapacidadKg, Precio, Stock, Activo)
+    VALUES (@Codigo, @Nombre, @Descripcion, @ImagenUrl, @CapacidadKg, @Precio, @Stock, 1);
 
     SET @IdProducto = SCOPE_IDENTITY();
 END
@@ -193,6 +194,7 @@ CREATE PROCEDURE dbo.sp_Producto_Actualizar
     @Codigo      NVARCHAR(20),
     @Nombre      NVARCHAR(120),
     @Descripcion NVARCHAR(300) = NULL,
+    @ImagenUrl   NVARCHAR(200) = NULL,
     @CapacidadKg INT,
     @Precio      DECIMAL(12,0),
     @Stock       INT,
@@ -205,7 +207,7 @@ BEGIN
         THROW 50041, 'Ya existe otro producto con ese codigo.', 1;
 
     UPDATE dbo.Producto
-    SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion,
+    SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, ImagenUrl = @ImagenUrl,
         CapacidadKg = @CapacidadKg, Precio = @Precio, Stock = @Stock, Activo = @Activo
     WHERE IdProducto = @IdProducto;
 
@@ -520,7 +522,7 @@ BEGIN
     SET NOCOUNT ON;
 
     SELECT d.IdDetalle, d.IdPedido, d.IdProducto, pr.Nombre AS Producto,
-           pr.CapacidadKg, d.Cantidad, d.PrecioUnitario, d.Subtotal
+           pr.ImagenUrl, pr.CapacidadKg, d.Cantidad, d.PrecioUnitario, d.Subtotal
     FROM dbo.DetallePedido d
     INNER JOIN dbo.Producto pr ON pr.IdProducto = d.IdProducto
     WHERE d.IdPedido = @IdPedido
