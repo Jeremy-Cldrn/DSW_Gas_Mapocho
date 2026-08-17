@@ -86,8 +86,6 @@ D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\scopedcss\bundle\GasMapocho.Ui.styles.css
-D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\6ewlikirdk-{0}-qgyl2yu3q4-qgyl2yu3q4.gz
-D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\jgw0ahiiel-{0}-ejztyab3cn-ejztyab3cn.gz
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\f5lc9inn42-{0}-69iy767zim-69iy767zim.gz
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\rr1ufi7vmw-{0}-gzyr29tf7x-gzyr29tf7x.gz
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\a1bktqfi5h-{0}-q3bczpqhdy-q3bczpqhdy.gz
@@ -106,3 +104,5 @@ D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\refint\GasMapocho.Ui.dll
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\GasMapocho.Ui.pdb
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\ref\GasMapocho.Ui.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\6ewlikirdk-{0}-erv4xj2djw-erv4xj2djw.gz
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Ui\obj\Debug\net9.0\compressed\jgw0ahiiel-{0}-pxa7kjx4r7-pxa7kjx4r7.gz

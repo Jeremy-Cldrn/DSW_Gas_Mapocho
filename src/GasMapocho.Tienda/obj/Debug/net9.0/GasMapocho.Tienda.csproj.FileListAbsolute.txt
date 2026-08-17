@@ -229,7 +229,6 @@ D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\scopedcss\bundle\GasMapocho.Tienda.styles.css
-D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\sz046x7d3o-{0}-klbxq1x37z-klbxq1x37z.gz
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\mt7kon18tj-{0}-61n19gt1b8-61n19gt1b8.gz
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\8aqzo8hqnf-{0}-iklm993wdj-iklm993wdj.gz
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\qp2pkzk170-{0}-to2zm9b8pm-to2zm9b8pm.gz
@@ -304,3 +303,4 @@ D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\GasMapocho.Tienda.pdb
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\GasMapocho.Tienda.genruntimeconfig.cache
 D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\ref\GasMapocho.Tienda.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\GasMapocho.Tienda\obj\Debug\net9.0\compressed\sz046x7d3o-{0}-sxantuzget-sxantuzget.gz

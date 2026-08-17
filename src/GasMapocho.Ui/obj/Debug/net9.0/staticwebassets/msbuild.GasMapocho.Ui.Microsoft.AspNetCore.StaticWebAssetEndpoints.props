@@ -3,26 +3,26 @@
     <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/componentes.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\componentes.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RrRKtpL/8bOLIT7Gh4IkRUW3wOWbzrW3n6zJquP\u002BfmA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"15721"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RrRKtpL/8bOLIT7Gh4IkRUW3wOWbzrW3n6zJquP\u002BfmA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Aug 2026 00:00:16 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Njmq9knADnjzvhfeMg68G1YRFU35OPehtQckSkkxKpw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"15760"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Njmq9knADnjzvhfeMg68G1YRFU35OPehtQckSkkxKpw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Aug 2026 07:19:52 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/componentes.qgyl2yu3q4.css">
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/componentes.erv4xj2djw.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\componentes.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qgyl2yu3q4"},{"Name":"integrity","Value":"sha256-RrRKtpL/8bOLIT7Gh4IkRUW3wOWbzrW3n6zJquP\u002BfmA="},{"Name":"label","Value":"_content/GasMapocho.Ui/css/componentes.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15721"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RrRKtpL/8bOLIT7Gh4IkRUW3wOWbzrW3n6zJquP\u002BfmA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Aug 2026 00:00:16 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"erv4xj2djw"},{"Name":"integrity","Value":"sha256-Njmq9knADnjzvhfeMg68G1YRFU35OPehtQckSkkxKpw="},{"Name":"label","Value":"_content/GasMapocho.Ui/css/componentes.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15760"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Njmq9knADnjzvhfeMg68G1YRFU35OPehtQckSkkxKpw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Aug 2026 07:19:52 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/tokens.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tokens.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1mwQZRosUbKh\u002Bte9PpWgzjCPGBMgS8pI141Km4HUJd4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3718"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221mwQZRosUbKh\u002Bte9PpWgzjCPGBMgS8pI141Km4HUJd4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Aug 2026 00:00:16 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HQORLDTaEhR1DCyDQhc6Y\u002BkN0tiDuI1R2oQ5mdjFlgI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4093"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HQORLDTaEhR1DCyDQhc6Y\u002BkN0tiDuI1R2oQ5mdjFlgI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Aug 2026 07:19:52 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/tokens.ejztyab3cn.css">
+    <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/css/tokens.pxa7kjx4r7.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tokens.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ejztyab3cn"},{"Name":"integrity","Value":"sha256-1mwQZRosUbKh\u002Bte9PpWgzjCPGBMgS8pI141Km4HUJd4="},{"Name":"label","Value":"_content/GasMapocho.Ui/css/tokens.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3718"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221mwQZRosUbKh\u002Bte9PpWgzjCPGBMgS8pI141Km4HUJd4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Aug 2026 00:00:16 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pxa7kjx4r7"},{"Name":"integrity","Value":"sha256-HQORLDTaEhR1DCyDQhc6Y\u002BkN0tiDuI1R2oQ5mdjFlgI="},{"Name":"label","Value":"_content/GasMapocho.Ui/css/tokens.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4093"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HQORLDTaEhR1DCyDQhc6Y\u002BkN0tiDuI1R2oQ5mdjFlgI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Aug 2026 07:19:52 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/GasMapocho.Ui/img/logoGasco2024.iptyly9oil.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\logoGasco2024.png'))</AssetFile>
