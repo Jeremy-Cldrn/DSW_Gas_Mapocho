@@ -139,27 +139,48 @@ public class PedidoVm
 
     public string TituloCliente => Estado switch
     {
-        "Aprobado"  => "Pedido confirmado",
-        "Rechazado" => "No pudimos cobrar el pago",
-        _           => "Pedido pendiente"
+        "Aprobado"   => "Pedido confirmado",
+        "Rechazado"  => "No pudimos cobrar el pago",
+        "En Proceso" => "Tu pedido está en preparación",
+        "Entregado"  => "Pedido entregado",
+        "Finalizado" => "Pedido finalizado",
+        "Cancelado"  => "Pedido cancelado",
+        _            => "Pedido pendiente"
     };
 
     public string DetalleCliente => Estado switch
     {
-        "Aprobado"  => "Tu pedido está en preparación para el despacho.",
-        "Rechazado" => "El pedido no se procesó y no se te cobró nada.",
-        _           => "Te avisaremos por correo apenas quede confirmado."
+        "Aprobado"   => "Tu pedido está en preparación para el despacho.",
+        "Rechazado"  => "El pedido no se procesó y no se te cobró nada.",
+        "En Proceso" => "Estamos preparando tu balón de gas para el despacho.",
+        "Entregado"  => "Tu balón de gas ya fue entregado.",
+        "Finalizado" => "El pedido quedó cerrado correctamente.",
+        "Cancelado"  => "Este pedido fue cancelado.",
+        _            => "Te avisaremos por correo apenas quede confirmado."
     };
 
     public string IconoCliente => Estado switch
     {
-        "Aprobado"  => "local_shipping",
-        "Rechazado" => "cancel",
-        _           => "schedule"
+        "Aprobado"   => "local_shipping",
+        "Rechazado"  => "cancel",
+        "En Proceso" => "inventory_2",
+        "Entregado"  => "task_alt",
+        "Finalizado" => "check_circle",
+        "Cancelado"  => "cancel",
+        _            => "schedule"
     };
 
-    /// <summary>Sufijo de la clase CSS: seguimiento-{aprobado|rechazado|pendiente}</summary>
-    public string ClaseCliente => Estado.ToLowerInvariant();
+    /// <summary>Sufijo de la clase CSS: seguimiento-{aprobado|rechazado|pendiente|enproceso|entregado|finalizado|cancelado}</summary>
+    public string ClaseCliente => Estado switch
+    {
+        "Aprobado"   => "aprobado",
+        "Rechazado"  => "rechazado",
+        "En Proceso" => "enproceso",
+        "Entregado"  => "entregado",
+        "Finalizado" => "finalizado",
+        "Cancelado"  => "cancelado",
+        _            => "pendiente"
+    };
 }
 
 public class ClienteVm

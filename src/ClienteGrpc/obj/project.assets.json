@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net9.0": {
       "Google.Protobuf/3.35.1": {
@@ -372,23 +372,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jerem\\.nuget\\packages\\": {},
+    "C:\\Users\\shern\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\ClienteGrpc\\ClienteGrpc.csproj",
+      "projectUniqueName": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\ClienteGrpc\\ClienteGrpc.csproj",
       "projectName": "ClienteGrpc",
-      "projectPath": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\ClienteGrpc\\ClienteGrpc.csproj",
-      "packagesPath": "C:\\Users\\jerem\\.nuget\\packages\\",
-      "outputPath": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\ClienteGrpc\\obj\\",
+      "projectPath": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\ClienteGrpc\\ClienteGrpc.csproj",
+      "packagesPath": "C:\\Users\\shern\\.nuget\\packages\\",
+      "outputPath": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\ClienteGrpc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shern\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -401,6 +401,7 @@
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {}
         }
@@ -415,10 +416,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net9.0": {
+        "framework": "net9.0",
         "targetAlias": "net9.0",
         "dependencies": {
           "Google.Protobuf": {
@@ -447,12 +449,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.19, 9.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[9.0.19, 9.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.19, 9.0.19]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[9.0.19, 9.0.19]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

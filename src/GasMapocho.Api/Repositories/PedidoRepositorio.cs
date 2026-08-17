@@ -118,7 +118,7 @@ public class PedidoRepositorio : IPedidoRepositorio
         };
 
         comando.Parameters.Add("@IdCliente", SqlDbType.Int).Value = (object?)idCliente ?? DBNull.Value;
-        comando.Parameters.Add("@Estado", SqlDbType.VarChar, 10).Value =
+        comando.Parameters.Add("@Estado", SqlDbType.VarChar, 15).Value =
             string.IsNullOrWhiteSpace(estado) ? DBNull.Value : estado;
         comando.Parameters.Add("@FechaInicial", SqlDbType.Date).Value = (object?)fechaInicial ?? DBNull.Value;
         comando.Parameters.Add("@FechaFinal", SqlDbType.Date).Value = (object?)fechaFinal ?? DBNull.Value;
@@ -180,6 +180,19 @@ public class PedidoRepositorio : IPedidoRepositorio
         }
 
         return pedido;
+    }
+
+    public void CambiarEstado(int idPedido, string estado)
+    {
+        using var conexion = _conexion.ObtenerConexion();
+        conexion.Open();
+
+        using var comando = new SqlCommand("dbo.sp_Pedido_CambiarEstado", conexion);
+        comando.CommandType = CommandType.StoredProcedure;
+        comando.Parameters.Add("@IdPedido", SqlDbType.Int).Value = idPedido;
+        comando.Parameters.Add("@Estado", SqlDbType.VarChar, 15).Value = estado;
+
+        comando.ExecuteNonQuery();
     }
 
     private static Pedido MapearCabecera(SqlDataReader lector) => new()

@@ -22,6 +22,9 @@ public interface IPedidoRepositorio
     /// una sola transaccion. Devuelve el id creado.
     /// </summary>
     int Registrar(PedidoNuevo pedido);
+
+    /// <summary>Asigna el estado de seguimiento del despacho de un pedido existente.</summary>
+    void CambiarEstado(int idPedido, string estado);
 }
 
 public interface IUsuarioRepositorio

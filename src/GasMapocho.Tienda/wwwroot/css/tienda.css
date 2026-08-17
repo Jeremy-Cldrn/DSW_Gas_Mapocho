@@ -179,9 +179,13 @@
 .pedido-seguimiento .titulo { font-weight: 700; font-size: var(--fs-sm); }
 .pedido-seguimiento .detalle { font-size: var(--fs-sm); opacity: .9; }
 
-.seguimiento-pendiente { background: var(--gs-pend-bg);  color: var(--gs-pend-fg); }
-.seguimiento-aprobado  { background: var(--gs-aprob-bg); color: var(--gs-aprob-fg); }
-.seguimiento-rechazado { background: var(--gs-rech-bg);  color: var(--gs-rech-fg); }
+.seguimiento-pendiente  { background: var(--gs-pend-bg);    color: var(--gs-pend-fg); }
+.seguimiento-aprobado   { background: var(--gs-aprob-bg);   color: var(--gs-aprob-fg); }
+.seguimiento-rechazado  { background: var(--gs-rech-bg);    color: var(--gs-rech-fg); }
+.seguimiento-enproceso  { background: var(--gs-proceso-bg); color: var(--gs-proceso-fg); }
+.seguimiento-entregado  { background: var(--gs-entreg-bg);  color: var(--gs-entreg-fg); }
+.seguimiento-finalizado { background: var(--gs-final-bg);   color: var(--gs-final-fg); }
+.seguimiento-cancelado  { background: var(--gs-cancel-bg);  color: var(--gs-cancel-fg); }
 
 .pedido-body { padding: var(--sp-5); }
 

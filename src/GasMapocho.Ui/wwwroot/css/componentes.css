@@ -263,9 +263,13 @@ a:focus-visible {
 }
 .badge-estado::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
-.estado-pendiente { background: var(--gs-pend-bg);  color: var(--gs-pend-fg);  border-color: var(--gs-pend-bd); }
-.estado-aprobado  { background: var(--gs-aprob-bg); color: var(--gs-aprob-fg); border-color: var(--gs-aprob-bd); }
-.estado-rechazado { background: var(--gs-rech-bg);  color: var(--gs-rech-fg);  border-color: var(--gs-rech-bd); }
+.estado-pendiente  { background: var(--gs-pend-bg);    color: var(--gs-pend-fg);    border-color: var(--gs-pend-bd); }
+.estado-aprobado   { background: var(--gs-aprob-bg);   color: var(--gs-aprob-fg);   border-color: var(--gs-aprob-bd); }
+.estado-rechazado  { background: var(--gs-rech-bg);    color: var(--gs-rech-fg);    border-color: var(--gs-rech-bd); }
+.estado-enproceso  { background: var(--gs-proceso-bg); color: var(--gs-proceso-fg); border-color: var(--gs-proceso-bd); }
+.estado-entregado  { background: var(--gs-entreg-bg);  color: var(--gs-entreg-fg);  border-color: var(--gs-entreg-bd); }
+.estado-finalizado { background: var(--gs-final-bg);   color: var(--gs-final-fg);   border-color: var(--gs-final-bd); }
+.estado-cancelado  { background: var(--gs-cancel-bg);  color: var(--gs-cancel-fg);  border-color: var(--gs-cancel-bd); }
 
 /* --- Tablas ------------------------------------------------- */
 .tabla-gs-wrap {

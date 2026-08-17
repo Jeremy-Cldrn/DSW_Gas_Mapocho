@@ -1,5 +1,23 @@
 @model PedidoVm
 
+<div class="d-flex align-items-center justify-content-between mb-3 pb-3"
+     style="border-bottom:1px solid var(--gs-gray-200)">
+    <partial name="_BadgeEstado" model="@Model.Estado" />
+
+    <form method="post" action="/Ventas/CambiarEstado" class="d-flex align-items-center gap-2">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.Id" />
+        <label for="estado-@Model.Id" class="visually-hidden">Nuevo estado</label>
+        <select id="estado-@Model.Id" name="estado" class="form-select form-select-sm" style="width:auto">
+            @foreach (var e in new[] { "Pendiente", "Aprobado", "Rechazado", "En Proceso", "Entregado", "Finalizado", "Cancelado" })
+            {
+                <option value="@e" selected="@(e == Model.Estado)">@e</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary btn-sm">Actualizar estado</button>
+    </form>
+</div>
+
 <div class="row g-4">
     <div class="col-md-7">
         <h3 style="font-size:var(--fs-sm)" class="mb-2">Productos</h3>

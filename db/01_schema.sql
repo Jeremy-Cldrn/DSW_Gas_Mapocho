@@ -91,7 +91,7 @@ CREATE TABLE dbo.Pedido (
     IdPedido          INT IDENTITY(1,1) PRIMARY KEY,
     IdCliente         INT           NOT NULL,
     Fecha             DATETIME2(0)  NOT NULL DEFAULT SYSDATETIME(),
-    Estado            VARCHAR(10)   NOT NULL DEFAULT 'Pendiente',
+    Estado            VARCHAR(15)   NOT NULL DEFAULT 'Pendiente',
     Subtotal          DECIMAL(12,0) NOT NULL,
     Despacho          DECIMAL(12,0) NOT NULL DEFAULT 0,
     Total             DECIMAL(12,0) NOT NULL,
@@ -102,7 +102,8 @@ CREATE TABLE dbo.Pedido (
     DireccionEntrega  NVARCHAR(200) NOT NULL,
     ReferenciaEntrega NVARCHAR(200) NULL,
     CONSTRAINT FK_Pedido_Cliente FOREIGN KEY (IdCliente) REFERENCES dbo.Cliente(IdCliente),
-    CONSTRAINT CK_Pedido_Estado CHECK (Estado IN ('Pendiente','Aprobado','Rechazado')),
+    CONSTRAINT CK_Pedido_Estado CHECK (Estado IN ('Pendiente','Aprobado','Rechazado',
+                                                   'En Proceso','Entregado','Finalizado','Cancelado')),
     CONSTRAINT CK_Pedido_Total  CHECK (Total = Subtotal + Despacho)
 );
 GO

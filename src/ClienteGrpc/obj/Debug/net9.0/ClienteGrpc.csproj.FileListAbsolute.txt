@@ -43,3 +43,26 @@ C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.genruntimeconfig.cache
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ref\ClienteGrpc.dll
 C:\CIBERTEC\QUINTO CICLO\DESARROLLO DE SERVICIOS WEB I\PROYECTOS\Proyecto_final_DSW_I\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.sourcelink.json
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.exe
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.deps.json
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.runtimeconfig.json
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\ClienteGrpc.pdb
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\Google.Protobuf.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Core.Api.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Net.Client.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\Grpc.Net.Common.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.csproj.AssemblyReference.cache
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.AssemblyInfoInputs.cache
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.AssemblyInfo.cs
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.csproj.CoreCompileInputs.cache
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.sourcelink.json
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteG.1CC0D4A1.Up2Date
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\refint\ClienteGrpc.dll
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.pdb
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ClienteGrpc.genruntimeconfig.cache
+D:\ciber\CICLO 5\PROG4695 DESARROLLO DE SERVICIOS WEB I\add\DSW_Gas_Mapocho\src\ClienteGrpc\obj\Debug\net9.0\ref\ClienteGrpc.dll

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GasMapocho.Tienda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfd906df32cbf1c7b54b377340728b4d579f7065")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff38dbbba6318c94e49736ea39c1093b44920b68")]
 [assembly: System.Reflection.AssemblyProductAttribute("GasMapocho.Tienda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GasMapocho.Tienda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

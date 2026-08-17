@@ -47,6 +47,13 @@
   --gs-aprob-bg:  #E6F6EC;  --gs-aprob-fg:  #10633A;  --gs-aprob-bd: #2E9E63;
   --gs-rech-bg:   #FDE8EA;  --gs-rech-fg:   #A11722;  --gs-rech-bd: #ED2939;
 
+  /* Estados de seguimiento del despacho (mismo patrón de las 3 líneas de
+     arriba: fondo claro + texto oscuro saturado). */
+  --gs-proceso-bg:   #E7F1FE;  --gs-proceso-fg:   #0B4C8C;  --gs-proceso-bd: #3B82C4;
+  --gs-entreg-bg:    #F1EAFB;  --gs-entreg-fg:    #5B2A86;  --gs-entreg-bd: #9B59B6;
+  --gs-final-bg:     #E6F7F5;  --gs-final-fg:     #0B6E64;  --gs-final-bd: #2CA69A;
+  --gs-cancel-bg:    #F1F2F4;  --gs-cancel-fg:    #495057;  --gs-cancel-bd: #ADB5BD;
+
   /* --- Tipografía --- */
   --gs-font-base:    'Mulish', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --gs-font-heading: 'Montserrat', var(--gs-font-base);

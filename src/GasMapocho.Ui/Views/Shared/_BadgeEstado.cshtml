@@ -7,9 +7,13 @@
 @{
     var clase = Model switch
     {
-        "Aprobado"  => "estado-aprobado",
-        "Rechazado" => "estado-rechazado",
-        _           => "estado-pendiente"
+        "Aprobado"   => "estado-aprobado",
+        "Rechazado"  => "estado-rechazado",
+        "En Proceso" => "estado-enproceso",
+        "Entregado"  => "estado-entregado",
+        "Finalizado" => "estado-finalizado",
+        "Cancelado"  => "estado-cancelado",
+        _            => "estado-pendiente"
     };
 }
 <span class="badge-estado @clase">@Model</span>

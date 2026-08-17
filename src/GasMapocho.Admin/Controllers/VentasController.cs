@@ -63,6 +63,7 @@ public class VentasController : Controller
                 new("Dirección"),
                 new("Fecha", ancho: "120px"),
                 new("Total", numerica: true, ancho: "130px"),
+                new("Estado", ancho: "140px"),
             },
             Filas = completos.Select(p => new FilaVm
             {
@@ -76,6 +77,7 @@ public class VentasController : Controller
                     new(p.Direccion),
                     new(p.Fecha.ToString("dd/MM/yyyy")),
                     new(p.Total.ToString("C0"), numerica: true, fuerte: true),
+                    CeldaVm.Badge(p.Estado),
                 }
             }).ToList(),
             Vacio = new EstadoVacioVm("receipt_long", "Todavía no hay ventas",
@@ -83,6 +85,18 @@ public class VentasController : Controller
         };
 
         return View(tabla);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> CambiarEstado(int id, string estado)
+    {
+        var r = await _api.CambiarEstadoPedidoAsync(id, estado);
+
+        if (r.Exito) TempData["Ok"] = "Estado del pedido actualizado correctamente.";
+        else TempData["Error"] = r.Mensaje;
+
+        return RedirectToAction(nameof(Index));
     }
 
     public IActionResult Error()

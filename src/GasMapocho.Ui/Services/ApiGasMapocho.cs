@@ -247,6 +247,10 @@ public class ApiGasMapocho
         return await EnviarAsync(HttpMethod.Post, "api/pedidos", cuerpo, leerId: true);
     }
 
+    /// <summary>Asigna el estado de seguimiento del despacho (En Proceso, Entregado, Finalizado, Cancelado).</summary>
+    public Task<Resultado> CambiarEstadoPedidoAsync(int id, string estado) =>
+        EnviarAsync(HttpMethod.Put, $"api/pedidos/{id}/estado", new { estado });
+
     // ============================================================
     // Reportes
     // ============================================================

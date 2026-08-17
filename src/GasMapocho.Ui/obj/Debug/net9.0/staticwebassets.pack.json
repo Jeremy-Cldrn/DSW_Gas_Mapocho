@@ -1,55 +1,55 @@
 {
   "Files": [
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\css\\componentes.css",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\css\\componentes.css",
       "PackagePath": "staticwebassets\\css\\componentes.css"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\css\\tokens.css",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\css\\tokens.css",
       "PackagePath": "staticwebassets\\css\\tokens.css"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\logoGasco2024.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\logoGasco2024.png",
       "PackagePath": "staticwebassets\\img\\logoGasco2024.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\producto-placeholder.svg",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\producto-placeholder.svg",
       "PackagePath": "staticwebassets\\img\\producto-placeholder.svg"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-11kg.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-11kg.png",
       "PackagePath": "staticwebassets\\img\\productos\\balon-11kg.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-15kg.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-15kg.png",
       "PackagePath": "staticwebassets\\img\\productos\\balon-15kg.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-45kg.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-45kg.png",
       "PackagePath": "staticwebassets\\img\\productos\\balon-45kg.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-5kg.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-5kg.png",
       "PackagePath": "staticwebassets\\img\\productos\\balon-5kg.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-gh-15.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\balon-gh-15.png",
       "PackagePath": "staticwebassets\\img\\productos\\balon-gh-15.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\kit-instalacion.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\kit-instalacion.png",
       "PackagePath": "staticwebassets\\img\\productos\\kit-instalacion.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\manguera.png",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\img\\productos\\manguera.png",
       "PackagePath": "staticwebassets\\img\\productos\\manguera.png"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\js\\formato.js",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\js\\formato.js",
       "PackagePath": "staticwebassets\\js\\formato.js"
     },
     {
-      "Id": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\wwwroot\\js\\tabla.js",
+      "Id": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\wwwroot\\js\\tabla.js",
       "PackagePath": "staticwebassets\\js\\tabla.js"
     },
     {

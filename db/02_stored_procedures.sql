@@ -449,7 +449,7 @@ IF OBJECT_ID('dbo.sp_Pedido_Listar', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_Pedi
 GO
 CREATE PROCEDURE dbo.sp_Pedido_Listar
     @IdCliente         INT = NULL,
-    @Estado            VARCHAR(10) = NULL,
+    @Estado            VARCHAR(15) = NULL,
     @FechaInicial      DATE = NULL,
     @FechaFinal        DATE = NULL,
     @Busqueda          NVARCHAR(120) = NULL,
@@ -590,6 +590,28 @@ BEGIN
 END
 GO
 
+IF OBJECT_ID('dbo.sp_Pedido_CambiarEstado', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_Pedido_CambiarEstado;
+GO
+-- Asigna el estado de seguimiento del despacho (En Proceso, Entregado,
+-- Finalizado, Cancelado), independiente del estado de pago que ya haya
+-- quedado (Pendiente/Aprobado/Rechazado). No valida el valor de @Estado:
+-- lo hace el CHECK CK_Pedido_Estado de la tabla.
+CREATE PROCEDURE dbo.sp_Pedido_CambiarEstado
+    @IdPedido INT,
+    @Estado   VARCHAR(15)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.Pedido
+    SET Estado = @Estado
+    WHERE IdPedido = @IdPedido;
+
+    IF @@ROWCOUNT = 0
+        THROW 50030, 'El pedido no existe.', 1;
+END
+GO
+
 /* ============================================================
    REPORTES
    ============================================================ */
@@ -598,7 +620,7 @@ IF OBJECT_ID('dbo.sp_Reporte_Pedidos', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_Re
 GO
 CREATE PROCEDURE dbo.sp_Reporte_Pedidos
     @IdCliente         INT = NULL,
-    @Estado            VARCHAR(10) = NULL,
+    @Estado            VARCHAR(15) = NULL,
     @FechaInicial      DATE = NULL,
     @FechaFinal        DATE = NULL,
     @Pagina            INT = 1,

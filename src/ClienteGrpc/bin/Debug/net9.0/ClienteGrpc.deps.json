@@ -9,8 +9,7 @@
       "ClienteGrpc/1.0.0": {
         "dependencies": {
           "Google.Protobuf": "3.35.1",
-          "Grpc.Net.Client": "2.83.0",
-          "Grpc.Tools": "2.83.0"
+          "Grpc.Net.Client": "2.83.0"
         },
         "runtime": {
           "ClienteGrpc.dll": {}
@@ -55,7 +54,6 @@
           }
         }
       },
-      "Grpc.Tools/2.83.0": {},
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -110,13 +108,6 @@
       "sha512": "sha512-9w52xxORdIGu4Mm8lff3psMIlarenu+7TC4uIfiiW9AyaHZ6iPE/18gIkG1DD9byGDuhjuhnN9hiviBUAmCuZw==",
       "path": "grpc.net.common/2.83.0",
       "hashPath": "grpc.net.common.2.83.0.nupkg.sha512"
-    },
-    "Grpc.Tools/2.83.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vK2Go/83W0v2Nn7tTP9fGrX4IjmOa93s3M0SZeFimU1vIIr2wL9yNJlIyK21y85SGm3++JncB8IF751cjoLHuQ==",
-      "path": "grpc.tools/2.83.0",
-      "hashPath": "grpc.tools.2.83.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
       "type": "package",

@@ -111,6 +111,15 @@ public class LineaNueva
     public int Cantidad { get; set; }
 }
 
+/// <summary>Lo que envía el panel Admin para asignar el estado de un pedido.</summary>
+public class CambiarEstadoPedido
+{
+    [Required(ErrorMessage = "Falta el estado.")]
+    [AllowedValues("Pendiente", "Aprobado", "Rechazado", "En Proceso", "Entregado", "Finalizado", "Cancelado",
+                   ErrorMessage = "El estado no es válido.")]
+    public string Estado { get; set; } = "";
+}
+
 // ------------------------------------------------------------ Autenticacion
 
 public class LoginRequest

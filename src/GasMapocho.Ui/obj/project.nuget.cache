@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6y4Z58DFv6I=",
+  "dgSpecHash": "bEGvqBZqaBo=",
   "success": true,
-  "projectFilePath": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\GasMapocho.Ui\\GasMapocho.Ui.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\GasMapocho.Ui\\GasMapocho.Ui.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.19\\microsoft.netcore.app.ref.9.0.19.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.19\\microsoft.windowsdesktop.app.ref.9.0.19.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.19\\microsoft.aspnetcore.app.ref.9.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

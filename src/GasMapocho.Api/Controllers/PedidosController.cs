@@ -66,4 +66,20 @@ public class PedidosController : ControllerBase
             return BadRequest(new { mensaje = ex.Message });
         }
     }
+
+    [HttpPut("{id:int}/estado")]
+    public ActionResult CambiarEstado(int id, [FromBody] CambiarEstadoPedido cuerpo)
+    {
+        if (!ModelState.IsValid) return ValidationProblem(ModelState);
+
+        try
+        {
+            _pedidos.CambiarEstado(id, cuerpo.Estado);
+            return NoContent();
+        }
+        catch (SqlException ex) when (ex.Number >= 50000)
+        {
+            return NotFound(new { mensaje = ex.Message });
+        }
+    }
 }

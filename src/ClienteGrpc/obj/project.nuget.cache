@@ -1,16 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "hPIEu3UqQTk=",
+  "dgSpecHash": "jvQtxiIDXJg=",
   "success": true,
-  "projectFilePath": "C:\\CIBERTEC\\QUINTO CICLO\\DESARROLLO DE SERVICIOS WEB I\\PROYECTOS\\Proyecto_final_DSW_I\\src\\ClienteGrpc\\ClienteGrpc.csproj",
+  "projectFilePath": "D:\\ciber\\CICLO 5\\PROG4695 DESARROLLO DE SERVICIOS WEB I\\add\\DSW_Gas_Mapocho\\src\\ClienteGrpc\\ClienteGrpc.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jerem\\.nuget\\packages\\google.protobuf\\3.35.1\\google.protobuf.3.35.1.nupkg.sha512",
-    "C:\\Users\\jerem\\.nuget\\packages\\grpc.core.api\\2.83.0\\grpc.core.api.2.83.0.nupkg.sha512",
-    "C:\\Users\\jerem\\.nuget\\packages\\grpc.net.client\\2.83.0\\grpc.net.client.2.83.0.nupkg.sha512",
-    "C:\\Users\\jerem\\.nuget\\packages\\grpc.net.common\\2.83.0\\grpc.net.common.2.83.0.nupkg.sha512",
-    "C:\\Users\\jerem\\.nuget\\packages\\grpc.tools\\2.83.0\\grpc.tools.2.83.0.nupkg.sha512",
-    "C:\\Users\\jerem\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\jerem\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\shern\\.nuget\\packages\\google.protobuf\\3.35.1\\google.protobuf.3.35.1.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\grpc.core.api\\2.83.0\\grpc.core.api.2.83.0.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\grpc.net.client\\2.83.0\\grpc.net.client.2.83.0.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\grpc.net.common\\2.83.0\\grpc.net.common.2.83.0.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\grpc.tools\\2.83.0\\grpc.tools.2.83.0.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.19\\microsoft.netcore.app.ref.9.0.19.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.19\\microsoft.windowsdesktop.app.ref.9.0.19.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.19\\microsoft.aspnetcore.app.ref.9.0.19.nupkg.sha512",
+    "C:\\Users\\shern\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.19\\microsoft.netcore.app.host.win-x64.9.0.19.nupkg.sha512"
   ],
   "logs": []
 }
